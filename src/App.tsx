@@ -257,36 +257,36 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="min-h-screen pt-20 md:pt-24 flex items-center bg-creme overflow-hidden">
+    <section id="hero" className="min-h-screen pt-16 md:pt-18 flex items-center bg-creme overflow-hidden">
       <motion.div 
         variants={container}
         initial="hidden"
         animate="show"
-        className="max-w-7xl mx-auto px-6 sm:px-8 py-6 md:py-10 grid grid-cols-1 md:grid-cols-[55%_45%] gap-12 lg:gap-20 items-center w-full"
+        className="max-w-7xl mx-auto px-6 sm:px-8 py-4 md:py-6 grid grid-cols-1 md:grid-cols-[55%_45%] gap-12 lg:gap-20 items-center w-full"
       >
         <div className="text-center md:text-left flex flex-col md:block">
-          <motion.div variants={item} className="flex items-center justify-center md:justify-start gap-3 mb-5 order-1">
+          <motion.div variants={item} className="flex items-center justify-center md:justify-start gap-3 mb-4 order-1">
             <div className="w-10 h-px bg-verde-med"></div>
             <span className="text-[10px] md:text-[11px] uppercase tracking-[0.3em] text-verde-med font-black">
               Estrategista de Carreira · Débora Bolangno
             </span>
           </motion.div>
           
-          <motion.h1 variants={item} className="font-serif text-[clamp(28px,4.4vw,56px)] font-black leading-[1.12] text-ink mb-6 tracking-tight order-2">
+          <motion.h1 variants={item} className="font-serif text-[clamp(28px,4.4vw,56px)] font-black leading-[1.12] text-ink mb-4 tracking-tight order-2">
             <span className="block">Clareza para decidir.</span>
             <span className="block text-ink/90">Confiança para agir.</span>
             <span className="block italic text-highlight mt-1 md:mt-1.5">Estratégia para crescer.</span>
           </motion.h1>
-           <motion.p variants={item} className="text-base md:text-lg lg:text-[19px] text-ink/65 max-w-[540px] mx-auto md:mx-0 leading-relaxed mb-4 md:mb-5 order-3">
+           <motion.p variants={item} className="text-base md:text-lg lg:text-[18px] text-ink/65 max-w-[540px] mx-auto md:mx-0 leading-relaxed mb-3 md:mb-4 order-3">
             Mentoria em carreira e liderança para profissionais que desejam ampliar seu impacto, fortalecer seu posicionamento e crescer com intenção.
           </motion.p>
 
           {/* Destaque Turma Aberta Liderança Atualizada e Marca Intencional */}
           <motion.div 
             variants={item} 
-            className="mt-2 md:mt-3 mb-6 p-5 md:p-6 bg-[#FAF6F0] border border-verde/15 rounded-[32px] shadow-xl shadow-verde/5 text-left max-w-[540px] lg:max-w-[580px] mx-auto md:mx-0 flex flex-col order-4"
+            className="mt-1 md:mt-2 mb-5 p-4 sm:p-5 bg-[#FAF6F0] border border-verde/15 rounded-[32px] shadow-xl shadow-verde/5 text-left max-w-[540px] lg:max-w-[580px] mx-auto md:mx-0 flex flex-col order-4"
           >
-            <div className="flex flex-wrap items-center gap-2.5 mb-3">
+            <div className="flex flex-wrap items-center gap-2.5 mb-2">
               <span className="bg-verde text-creme text-[9px] uppercase tracking-[0.2em] font-black px-2.5 py-1 rounded-md">
                 TURMAS ABERTAS
               </span>
@@ -295,27 +295,23 @@ const Hero = () => {
               </span>
             </div>
             
-            <h3 className="font-serif text-lg md:text-xl font-black text-ink mb-0.5 leading-tight">Escolha a turma ideal para o seu momento</h3>
-            <p className="text-xs md:text-[13px] text-ink/65 mb-4 leading-relaxed">
+            <h3 className="font-serif text-[16px] md:text-lg font-black text-ink mb-0.5 leading-tight">Escolha a turma ideal para o seu momento</h3>
+            <p className="text-[11px] md:text-xs text-ink/65 mb-3 leading-relaxed">
               Dois programas ao vivo, com propostas diferentes e vagas abertas agora.
             </p>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {/* Programa 1: Liderança Atualizada */}
-              <div className="bg-white border border-verde/10 rounded-2xl p-4 hover:border-verde/20 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+              <div className="bg-white border border-verde/10 rounded-2xl p-3.5 hover:border-verde/20 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
                 <div>
-                  <div className="flex items-center justify-between gap-2 mb-2">
-                    <h4 className="font-serif text-[14px] md:text-[15px] font-extrabold text-verde leading-tight">Liderança Atualizada</h4>
-                    <span className="inline-flex items-center px-1.5 py-0.5 rounded-full text-[8px] font-black tracking-wider bg-verde/5 text-verde-med uppercase shrink-0">
+                  <div className="flex flex-col gap-1.5 mb-2.5">
+                    <h4 className="font-serif text-[17px] sm:text-[18px] md:text-[19px] lg:text-[20px] font-black text-verde leading-tight tracking-tight">Liderança Atualizada</h4>
+                    <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[8.5px] font-black tracking-wider bg-verde/5 text-verde-med uppercase self-start">
                       Turma semanal
                     </span>
                   </div>
-                  
-                  <p className="text-ink/80 text-[11px] leading-normal mb-3">
-                    Para líderes que querem se comunicar melhor, decidir com clareza e conduzir seus times com mais segurança.
-                  </p>
 
-                  <div className="space-y-1 text-[11px] mb-3">
+                  <div className="space-y-1 text-[11px] mb-2 border-t border-verde/5 pt-2">
                     <div className="flex items-center gap-1.5 text-ink font-semibold">
                       <Calendar size={12} className="text-dourado shrink-0" />
                       <span>03, 10, 17 e 24/08</span>
@@ -329,7 +325,7 @@ const Hero = () => {
 
                 <a 
                   href="lideranca-atualizada.html" 
-                  className="inline-flex items-center gap-1 text-[10px] font-black text-verde hover:text-dourado uppercase tracking-widest transition-all duration-300 self-start group/link border-b border-verde/20 hover:border-dourado pb-0.5 mt-2"
+                  className="inline-flex items-center gap-1 text-[10.5px] font-black text-verde hover:text-dourado uppercase tracking-wider transition-all duration-300 self-start group/link border-b-2 border-verde/20 hover:border-dourado pb-0.5 mt-2"
                 >
                   <span>Garantir minha vaga</span>
                   <ArrowRight size={12} className="transition-transform duration-300 group-hover/link:translate-x-1 text-verde group-hover/link:text-dourado" />
@@ -337,20 +333,16 @@ const Hero = () => {
               </div>
 
               {/* Programa 2: Marca Intencional */}
-              <div className="bg-white border border-verde/10 rounded-2xl p-4 hover:border-verde/20 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+              <div className="bg-white border border-verde/10 rounded-2xl p-3.5 hover:border-verde/20 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
                 <div>
-                  <div className="flex items-center justify-between gap-2 mb-2">
-                    <h4 className="font-serif text-[14px] md:text-[15px] font-extrabold text-verde leading-tight">Marca Intencional</h4>
-                    <span className="inline-flex items-center px-1.5 py-0.5 rounded-full text-[8px] font-black tracking-wider bg-dourado/10 text-[#8c744c] uppercase shrink-0">
+                  <div className="flex flex-col gap-1.5 mb-2.5">
+                    <h4 className="font-serif text-[17px] sm:text-[18px] md:text-[19px] lg:text-[20px] font-black text-verde leading-tight tracking-tight">Marca Intencional</h4>
+                    <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[8.5px] font-black tracking-wider bg-dourado/10 text-[#8c744c] uppercase self-start">
                       Turma quinzenal
                     </span>
                   </div>
-                  
-                  <p className="text-ink/80 text-[11px] leading-normal mb-3">
-                    Para profissionais que querem fortalecer posicionamento, narrativa e presença executiva.
-                  </p>
 
-                  <div className="space-y-1 text-[11px] mb-3">
+                  <div className="space-y-1 text-[11px] mb-2 border-t border-verde/5 pt-2">
                     <div className="flex items-center gap-1.5 text-ink font-semibold">
                       <Calendar size={12} className="text-dourado shrink-0" />
                       <span>12 e 26/08 · 09 e 23/09</span>
@@ -364,7 +356,7 @@ const Hero = () => {
 
                 <a 
                   href="marca-intencional.html" 
-                  className="inline-flex items-center gap-1 text-[10px] font-black text-verde hover:text-dourado uppercase tracking-widest transition-all duration-300 self-start group/link border-b border-verde/20 hover:border-dourado pb-0.5 mt-2"
+                  className="inline-flex items-center gap-1 text-[10.5px] font-black text-verde hover:text-dourado uppercase tracking-wider transition-all duration-300 self-start group/link border-b-2 border-verde/20 hover:border-dourado pb-0.5 mt-2"
                 >
                   <span>Garantir minha vaga</span>
                   <ArrowRight size={12} className="transition-transform duration-300 group-hover/link:translate-x-1 text-verde group-hover/link:text-dourado" />
@@ -374,7 +366,7 @@ const Hero = () => {
           </motion.div>
           
           {/* CTAs da Hero (Principal & Secundário) */}
-          <motion.div variants={item} className="order-5 mb-6 md:mb-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+          <motion.div variants={item} className="order-5 mb-5 md:mb-6 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <a 
               href="#programas" 
               className="inline-flex items-center justify-center gap-4 bg-verde text-white px-8 md:px-10 py-4 rounded-full text-[11px] md:text-[12px] uppercase tracking-[0.25em] font-bold transition-all hover:bg-[#112e28] hover:-translate-y-px shadow-xl shadow-verde/20 group w-full sm:w-auto animate-pulse-subtle"
@@ -389,7 +381,7 @@ const Hero = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-            className="order-6 relative rounded-[32px] overflow-hidden aspect-[4/5] bg-verde shadow-xl border border-ink/5 w-full max-w-[420px] mx-auto my-8 block md:hidden"
+            className="order-6 relative rounded-[32px] overflow-hidden aspect-[4/5] bg-verde shadow-xl border border-ink/5 w-full max-w-[420px] mx-auto my-6 block md:hidden"
           >
             <img 
               src="https://i.ibb.co/mVqGg1yW/debora-hero-nova.webp" 
@@ -408,7 +400,7 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.95, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.5 }}
-          className="relative rounded-[40px] md:rounded-[64px] overflow-hidden aspect-[4/5] bg-verde shadow-2xl border border-ink/5 hidden md:block w-full max-w-[440px] lg:max-w-[480px] mx-auto md:max-w-none md:self-start md:mt-6"
+          className="relative rounded-[40px] md:rounded-[64px] overflow-hidden aspect-[4/5] bg-verde shadow-2xl border border-ink/5 hidden md:block w-full max-w-[380px] lg:max-w-[410px] mx-auto md:max-w-none md:self-start md:mt-2"
         >
           <img 
             src="https://i.ibb.co/mVqGg1yW/debora-hero-nova.webp" 
