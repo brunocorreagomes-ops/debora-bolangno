@@ -278,7 +278,7 @@ const Hero = () => {
             <span className="block italic text-highlight mt-1 md:mt-1.5">Estratégia para crescer.</span>
           </motion.h1>
            <motion.p variants={item} className="text-base md:text-[17px] lg:text-[18px] text-ink/70 max-w-[620px] md:max-w-none mx-auto md:mx-0 leading-relaxed mb-3 md:mb-4 order-3 lg:whitespace-nowrap">
-            Programas ao vivo para fortalecer liderança, presença executiva e posicionamento.
+            Programas ao vivo para fortalecer liderança, presença e posicionamento profissional.
           </motion.p>
 
           {/* Destaque Turma Aberta Liderança Atualizada e Marca Intencional */}
@@ -331,7 +331,7 @@ const Hero = () => {
                     href="lideranca-atualizada.html" 
                     className="inline-flex items-center justify-center gap-1 text-[10px] font-black text-verde/80 hover:text-verde hover:bg-verde/5 border border-verde/15 hover:border-verde/35 uppercase tracking-wider transition-all duration-200 text-center py-2 rounded-full"
                   >
-                    <span>VER PROGRAMA</span>
+                    <span>VER DETALHES</span>
                     <ArrowRight size={10} />
                   </a>
                 </div>
@@ -372,7 +372,7 @@ const Hero = () => {
                     href="marca-intencional.html" 
                     className="inline-flex items-center justify-center gap-1 text-[10px] font-black text-verde/80 hover:text-verde hover:bg-verde/5 border border-verde/15 hover:border-verde/35 uppercase tracking-wider transition-all duration-200 text-center py-2 rounded-full"
                   >
-                    <span>VER PROGRAMA</span>
+                    <span>VER DETALHES</span>
                     <ArrowRight size={10} />
                   </a>
                 </div>
