@@ -333,6 +333,46 @@
                     </div>
                 </article>
 
+                <!-- Post: Aqui pode -->
+                <article class="post-card group bg-white border border-ink/5 rounded-[32px] p-8 md:p-10 flex flex-col justify-between hover:border-verde/20 hover:shadow-xl hover:shadow-verde/4 hover:-translate-y-1.5 transition-all duration-400" data-category="Liderança, Mundo Corporativo">
+                    <div>
+                        <div class="flex items-center justify-between gap-4 mb-6">
+                            <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-verde bg-verde/5 px-3 py-1 rounded-full">Liderança / Cultura</span>
+                            <span class="text-xs text-ink/40 font-medium">4 min de leitura</span>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-verde mb-4 leading-snug group-hover:text-verde-med transition-colors">
+                            <a href="blog/aqui-pode-espaco-seguro-jogo-corporativo.html">Aqui pode: segurança psicológica e confiança no jogo corporativo</a>
+                        </h3>
+                        <p class="text-ink/65 text-sm md:text-base leading-relaxed mb-8">
+                            Reflexão de Débora Bolangno sobre segurança psicológica, confiança e espaços de escuta no ambiente corporativo de alta exigência.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-ink/5 flex items-center justify-between">
+                        <span class="text-[11px] uppercase tracking-[0.15em] font-bold text-ink/40 group-hover:text-verde transition-colors">Ler artigo</span>
+                        <svg class="w-4 h-4 text-ink/30 group-hover:text-verde group-hover:translate-x-1.5 transition-all" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path></svg>
+                    </div>
+                </article>
+
+                <!-- Post: Capital político -->
+                <article class="post-card group bg-white border border-ink/5 rounded-[32px] p-8 md:p-10 flex flex-col justify-between hover:border-verde/20 hover:shadow-xl hover:shadow-verde/4 hover:-translate-y-1.5 transition-all duration-400" data-category="Posicionamento, Mundo Corporativo, Carreira">
+                    <div>
+                        <div class="flex items-center justify-between gap-4 mb-6">
+                            <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-verde bg-verde/5 px-3 py-1 rounded-full">Posicionamento / Carreira</span>
+                            <span class="text-xs text-ink/40 font-medium">5 min de leitura</span>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-verde mb-4 leading-snug group-hover:text-verde-med transition-colors">
+                            <a href="blog/capital-politico-ativo-invisivel-carreira.html">Capital político: o ativo invisível que influencia sua carreira</a>
+                        </h3>
+                        <p class="text-ink/65 text-sm md:text-base leading-relaxed mb-8">
+                            Entenda por que capital político, reputação e leitura estratégica de ambiente são ativos decisivos para o crescimento profissional e ascensão executiva.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-ink/5 flex items-center justify-between">
+                        <span class="text-[11px] uppercase tracking-[0.15em] font-bold text-ink/40 group-hover:text-verde transition-colors">Ler artigo</span>
+                        <svg class="w-4 h-4 text-ink/30 group-hover:text-verde group-hover:translate-x-1.5 transition-all" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path></svg>
+                    </div>
+                </article>
+
                 <!-- Post 1: Liderança -->
                 <article class="post-card group bg-white border border-ink/5 rounded-[32px] p-8 md:p-10 flex flex-col justify-between hover:border-verde/20 hover:shadow-xl hover:shadow-verde/4 hover:-translate-y-1.5 transition-all duration-400" data-category="Liderança">
                     <div>
@@ -556,7 +596,8 @@
             // Update active button styling
             const buttons = document.querySelectorAll('.category-btn');
             buttons.forEach(btn => {
-                if (btn.textContent.trim() === category || (category === 'All' && btn.textContent.trim() === 'Todos') || (category === 'Posicionamento' && btn.textContent.trim() === 'Posicionamento')) {
+                const btnText = btn.textContent.trim();
+                if (btnText === category || (category === 'All' && btnText === 'Todos') || (category === 'Posicionamento' && btnText === 'Posicionamento')) {
                     btn.classList.add('bg-verde', 'text-white', 'border-verde');
                     btn.classList.remove('bg-white', 'text-ink/70');
                 } else {
@@ -569,8 +610,15 @@
             const posts = document.querySelectorAll('.post-card');
             posts.forEach(post => {
                 const postCat = post.getAttribute('data-category');
-                if (category === 'All' || postCat === category || (category === 'Posicionamento' && postCat === 'Posicionamento')) {
+                if (category === 'All') {
                     post.style.display = 'flex';
+                } else if (postCat) {
+                    const cats = postCat.split(',').map(c => c.trim());
+                    if (cats.includes(category)) {
+                        post.style.display = 'flex';
+                    } else {
+                        post.style.display = 'none';
+                    }
                 } else {
                     post.style.display = 'none';
                 }
