@@ -48,4 +48,10 @@
   .text-balance {
     text-wrap: balance;
   }
+  .section-eyebrow {
+    @apply text-[11px] md:text-[12px] font-bold uppercase tracking-[0.22em] text-verde-med block mb-6;
+  }
+  .section-eyebrow-light {
+    @apply text-[11px] md:text-[12px] font-bold uppercase tracking-[0.22em] text-creme/80 block mb-6;
+  }
 }

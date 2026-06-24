@@ -506,7 +506,7 @@ const Identification = () => {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-[10px] uppercase tracking-[0.4em] font-black text-verde-med block mb-6"
+            className="section-eyebrow"
           >
             Sintomas da Estagnação
           </motion.span>
@@ -568,7 +568,7 @@ const About = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
         </div>
         <div>
-          <span className="text-[9px] font-mono uppercase tracking-[0.4em] text-verde-med/30 mb-6 block">Sobre Débora Bolangno</span>
+          <span className="section-eyebrow">Sobre Débora Bolangno</span>
           <h2 className="font-serif text-[clamp(32px,3.5vw,48px)] font-black leading-[1.15] text-ink mb-8">
             Estratégia, Liderança <br />
             <span className="italic text-highlight">& Execução Real.</span>
@@ -629,7 +629,7 @@ const TestimonialsLuxury = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="text-[10px] uppercase tracking-[0.4em] text-creme/40 font-black mb-6 block"
+            className="section-eyebrow-light text-center"
           >
             Impacto Real
           </motion.span>
@@ -713,8 +713,11 @@ const PresenceGallery = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="text-[10px] uppercase tracking-[0.4em] font-black text-verde-med block mb-4">Presença & Atuação</span>
-          <h2 className="font-serif text-[ clamp(32px,3vw,48px) ] font-black text-ink italic leading-none">A liderança através do olhar.</h2>
+          <span className="section-eyebrow text-center">PRESENÇA PROFISSIONAL</span>
+          <h2 className="font-serif text-[clamp(32px,3.5vw,48px)] font-black text-ink leading-tight">Autoridade construída na prática.</h2>
+          <p className="text-ink/65 text-base sm:text-lg max-w-3xl mx-auto leading-relaxed mt-4">
+            Mais de 20 anos de atuação no mundo corporativo, desenvolvendo lideranças, posicionamento e decisões de carreira com estratégia.
+          </p>
         </motion.div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -774,7 +777,7 @@ const Triagem = () => {
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-[10px] uppercase tracking-[0.4em] font-black text-dourado block mb-6 text-center"
+          className="section-eyebrow text-dourado text-center"
         >
           Seu momento
         </motion.span>
@@ -1288,7 +1291,7 @@ const ProgramsGrid = () => {
             initial={{ opacity: 0, x: -10 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="text-[10px] uppercase tracking-[0.3em] text-verde-med font-bold mb-4 block"
+            className="section-eyebrow"
           >
             Ecossistema de Soluções
           </motion.span>
@@ -1405,7 +1408,7 @@ const Lectures = () => {
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="text-[10px] uppercase tracking-[0.4em] text-verde-med font-black mb-6 block"
+              className="section-eyebrow"
             >
               Palestras & Workshops
             </motion.span>
@@ -1461,7 +1464,7 @@ const Repertoire = () => {
     <section className="bg-white py-20 md:py-24 px-6 sm:px-8 overflow-hidden">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
         <div className="order-2 md:order-1">
-          <span className="text-[10px] uppercase tracking-[0.3em] text-verde-med font-bold mb-6 block text-center md:text-left">Repertório & Autoridade</span>
+          <span className="section-eyebrow text-center md:text-left">Repertório & Autoridade</span>
           <h2 className="font-serif text-[clamp(28px,3.5vw,48px)] font-black leading-[1.15] text-ink mb-8 text-center md:text-left">
             Fundamento que <br />
             <span className="italic text-highlight">gera resultado.</span>
@@ -1520,7 +1523,7 @@ const Differentials = () => {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                className="text-[10px] uppercase tracking-[0.4em] text-creme/40 font-black mb-6 block"
+                className="section-eyebrow-light text-center md:text-left"
               >
                 Diferenciais
               </motion.span>
@@ -1692,7 +1695,7 @@ const CTA = () => {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="text-[10px] uppercase tracking-[0.4em] text-verde-med font-black mb-8 block"
+              className="section-eyebrow"
             >
               Próximo Passo
             </motion.span>

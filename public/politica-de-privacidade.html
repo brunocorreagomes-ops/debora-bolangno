@@ -123,6 +123,35 @@
             transition: var(--transition);
         }
 
+        .section-eyebrow {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.22em;
+            color: #2d5a47; /* verde-med */
+            display: block;
+            margin-bottom: 1.5rem; /* mb-6 */
+        }
+        @media (min-width: 768px) {
+            .section-eyebrow {
+                font-size: 12px;
+            }
+        }
+        .section-eyebrow-light {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.22em;
+            color: rgba(249, 247, 242, 0.8); /* creme/80 */
+            display: block;
+            margin-bottom: 1.5rem; /* mb-6 */
+        }
+        @media (min-width: 768px) {
+            .section-eyebrow-light {
+                font-size: 12px;
+            }
+        }
+
         header {
             background-color: #ffffff;
             backdrop-filter: blur(10px);
@@ -243,7 +272,7 @@
 
             <!-- Header Section -->
             <div class="text-center mb-16">
-                <span class="text-[10px] uppercase tracking-[0.4em] font-bold text-dourado block mb-4">Conformidade e Transparência</span>
+                <span class="section-eyebrow text-center">Conformidade e Transparência</span>
                 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif text-verde mb-6 leading-tight">Política de Privacidade</h1>
                 <p class="text-ink/60 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
                     Como tratamos as suas informações pessoais e garantimos a sua privacidade neste site de mentoria executiva.
