@@ -893,7 +893,7 @@
     </section>
 
     <!-- SEÇÃO CTA FINAL UNIFICADA -->
-    <section class="py-20 md:py-28 bg-[#FAF6F0] border-t border-ink/5 text-center">
+    <section id="cta-final-unificada" class="py-20 md:py-28 bg-[#FAF6F0] border-t border-ink/5 text-center">
         <div class="container max-w-4xl px-6">
             <span class="text-[10px] uppercase tracking-[0.25em] text-[#bca374] font-extrabold mb-4 block">PRÓXIMA TURMA · AGOSTO</span>
             
@@ -910,13 +910,6 @@
                     <span>Garantir minha vaga</span>
                     <svg class="w-4 h-4 text-dourado" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
                 </a>
-            </div>
-
-            <!-- Frase de apoio - citação integrada -->
-            <div class="mt-14 mb-6 max-w-2xl mx-auto border-y border-verde/10 py-6">
-                <p class="text-lg md:text-xl italic font-serif text-verde font-medium tracking-wide">
-                    “Seu time é um reflexo da sua liderança.”
-                </p>
             </div>
             
             <div class="mt-16 flex justify-center">
@@ -1022,13 +1015,15 @@
             const pageIntro = document.querySelector('.page-intro');
             const floatingActions = document.querySelector('.floating-actions');
             const footer = document.querySelector('footer');
+            const ctaFinal = document.getElementById('cta-final-unificada');
 
-            if (stickyCtaBar && pageIntro && footer) {
+            if (stickyCtaBar && pageIntro && (footer || ctaFinal)) {
                 let isIntroVisible = true;
-                let isFooterVisible = false;
+                const visibleTriggers = new Set();
 
                 const updateBarVisibility = () => {
-                    if (!isIntroVisible && !isFooterVisible && window.scrollY > 150) {
+                    const isCtaFinalOrFooterVisible = visibleTriggers.size > 0;
+                    if (!isIntroVisible && !isCtaFinalOrFooterVisible && window.scrollY > 150) {
                         stickyCtaBar.classList.remove('translate-y-full', 'opacity-0', 'pointer-events-none');
                         stickyCtaBar.classList.add('translate-y-0', 'opacity-100', 'pointer-events-auto');
                         if (floatingActions) floatingActions.classList.add('with-bar');
@@ -1046,15 +1041,20 @@
                     });
                 }, { root: null, threshold: 0 });
 
-                const footerObserver = new IntersectionObserver((entries) => {
+                const hideObserver = new IntersectionObserver((entries) => {
                     entries.forEach(entry => {
-                        isFooterVisible = entry.isIntersecting;
+                        if (entry.isIntersecting) {
+                            visibleTriggers.add(entry.target);
+                        } else {
+                            visibleTriggers.delete(entry.target);
+                        }
                         updateBarVisibility();
                     });
                 }, { root: null, threshold: 0 });
 
                 introObserver.observe(pageIntro);
-                footerObserver.observe(footer);
+                if (footer) hideObserver.observe(footer);
+                if (ctaFinal) hideObserver.observe(ctaFinal);
 
                 window.addEventListener('scroll', updateBarVisibility, { passive: true });
             }

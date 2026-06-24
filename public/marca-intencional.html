@@ -1101,7 +1101,7 @@
     </section>
     
     <!-- SEÇÃO CTA FINAL -->
-    <section class="py-20 md:py-28 bg-[#FAF7F2] border-t border-ink/5">
+    <section id="cta-final-unificada" class="py-20 md:py-28 bg-[#FAF7F2] border-t border-ink/5">
         <div class="container text-center max-w-4xl px-6">
             <h2 class="font-serif text-3xl md:text-5xl lg:text-6xl text-verde leading-tight mb-10">Construa sua presença de forma <br> <i>intencional e estratégica.</i></h2>
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -1227,13 +1227,15 @@
             const manifestoHero = document.querySelector('.manifesto-hero');
             const floatingActions = document.querySelector('.floating-actions');
             const footer = document.querySelector('footer');
+            const ctaFinal = document.getElementById('cta-final-unificada');
 
-            if (stickyCtaBar && manifestoHero && footer) {
+            if (stickyCtaBar && manifestoHero && (footer || ctaFinal)) {
                 let isHeroVisible = true;
-                let isFooterVisible = false;
+                const visibleTriggers = new Set();
 
                 const updateBarVisibility = () => {
-                    if (!isHeroVisible && !isFooterVisible && window.scrollY > 150) {
+                    const isCtaFinalOrFooterVisible = visibleTriggers.size > 0;
+                    if (!isHeroVisible && !isCtaFinalOrFooterVisible && window.scrollY > 150) {
                         stickyCtaBar.classList.remove('translate-y-full', 'opacity-0', 'pointer-events-none');
                         stickyCtaBar.classList.add('translate-y-0', 'opacity-100', 'pointer-events-auto');
                         if (floatingActions) floatingActions.classList.add('with-bar');
@@ -1251,15 +1253,20 @@
                     });
                 }, { root: null, threshold: 0 });
 
-                const footerObserver = new IntersectionObserver((entries) => {
+                const hideObserver = new IntersectionObserver((entries) => {
                     entries.forEach(entry => {
-                        isFooterVisible = entry.isIntersecting;
+                        if (entry.isIntersecting) {
+                            visibleTriggers.add(entry.target);
+                        } else {
+                            visibleTriggers.delete(entry.target);
+                        }
                         updateBarVisibility();
                     });
                 }, { root: null, threshold: 0 });
 
                 heroObserver.observe(manifestoHero);
-                footerObserver.observe(footer);
+                if (footer) hideObserver.observe(footer);
+                if (ctaFinal) hideObserver.observe(ctaFinal);
 
                 window.addEventListener('scroll', updateBarVisibility, { passive: true });
             }
