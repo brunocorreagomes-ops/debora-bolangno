@@ -396,6 +396,8 @@ const Hero = () => {
               alt="Débora Bolangno" 
               className="absolute w-full h-[110%] -top-[5%] object-cover object-[center_20%]"
               referrerPolicy="no-referrer"
+              loading="eager"
+              fetchPriority="high"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
           </motion.div>
@@ -413,6 +415,8 @@ const Hero = () => {
             alt="Débora Bolangno" 
             className="absolute w-full h-[110%] -top-[5%] object-cover object-[center_20%] transition-transform duration-[3s] hover:scale-105"
             referrerPolicy="no-referrer"
+            loading="eager"
+            fetchPriority="high"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
           <motion.img 
