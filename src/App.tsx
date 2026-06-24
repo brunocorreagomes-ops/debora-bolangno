@@ -1721,34 +1721,54 @@ const CTA = () => {
 const Footer = () => {
   return (
     <footer className="bg-verde py-16 px-8 text-creme">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
-        <div className="flex flex-col items-center md:items-start gap-4">
-          <div className="flex items-center gap-4">
-            <img src="https://i.ibb.co/v4bp7gxB/logo-db-3.png" alt="Logo" className="w-10 h-10 object-contain brightness-0 invert" />
-            <div className="flex flex-col">
-              <span className="font-serif text-xl font-bold leading-none mb-1">Débora Bolangno</span>
-              <span className="text-[9px] uppercase tracking-widest text-creme/40">Estratégia de Carreira & Liderança</span>
+      <div className="max-w-7xl mx-auto">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-10 pb-8 border-b border-white/10">
+          <div className="flex flex-col items-center md:items-start gap-4">
+            <div className="flex items-center gap-4">
+              <img src="https://i.ibb.co/v4bp7gxB/logo-db-3.png" alt="Logo" className="w-10 h-10 object-contain brightness-0 invert" />
+              <div className="flex flex-col">
+                <span className="font-serif text-xl font-bold leading-none mb-1">Débora Bolangno</span>
+                <span className="text-[9px] uppercase tracking-widest text-creme/40">Estratégia de Carreira & Liderança</span>
+              </div>
             </div>
           </div>
-        </div>
-        
-        <div className="flex gap-6">
-          <a href="https://www.instagram.com/deborabolangno" className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-white/10 transition-colors">
-            <Instagram size={18} />
-          </a>
-          <a href="https://www.linkedin.com/in/deborabolangno" className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-white/10 transition-colors">
-            <Linkedin size={18} />
-          </a>
-          <a href="mailto:deborabolangno@outlook.com" className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-white/10 transition-colors">
-            <Mail size={18} />
-          </a>
+          
+          <div className="flex gap-6">
+            <a href="https://www.instagram.com/deborabolangno" target="_blank" rel="noopener" className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-white/10 transition-colors">
+              <Instagram size={18} />
+            </a>
+            <a href="https://www.linkedin.com/in/deborabolangno" target="_blank" rel="noopener" className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-white/10 transition-colors">
+              <Linkedin size={18} />
+            </a>
+            <a href="mailto:deborabolangno@outlook.com" className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-white/10 transition-colors">
+              <Mail size={18} />
+            </a>
+          </div>
+
+          <div className="text-center md:text-right">
+            <p className="text-creme/60 text-[8.5px] sm:text-[11px] font-mono uppercase tracking-[0.15em] sm:tracking-[0.4em] mb-1">
+              Desenvolvido por <a href="https://www.orvalia.com.br" target="_blank" rel="noopener" className="hover:text-creme transition-colors underline underline-offset-4 whitespace-nowrap" style={{ whiteSpace: 'nowrap', display: 'inline-block' }}><span className="whitespace-nowrap" style={{ whiteSpace: 'nowrap', display: 'inline-block' }}>Orvalia Studio</span></a>
+            </p>
+            <p className="text-[9px] sm:text-[11px] font-mono text-creme/60 uppercase tracking-[0.15em] sm:tracking-[0.4em] leading-relaxed">
+              <span className="block sm:inline mb-0.5 sm:mb-0">© 2026 Débora Bolangno</span>
+              <span className="hidden sm:inline"> · </span>
+              <span className="block sm:inline">Todos os direitos reservados</span>
+            </p>
+          </div>
         </div>
 
-        <div className="text-center md:text-right">
-          <p className="text-creme/60 text-[8.5px] sm:text-[11px] font-mono uppercase tracking-[0.15em] sm:tracking-[0.4em] mb-1">
-            Desenvolvido por <a href="https://www.orvalia.com.br" target="_blank" rel="noopener" className="hover:text-creme transition-colors underline underline-offset-4 whitespace-nowrap" style={{ whiteSpace: 'nowrap', display: 'inline-block' }}><span className="whitespace-nowrap" style={{ whiteSpace: 'nowrap', display: 'inline-block' }}>Orvalia Studio</span></a>
-          </p>
-          <p className="text-[9px] sm:text-[11px] font-mono text-creme/60 uppercase tracking-[0.2em] sm:tracking-[0.4em]">© 2026 Débora Bolangno · Todos os direitos reservados</p>
+        {/* Legal links row */}
+        <div className="mt-8 flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-4 text-center">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-[9px] sm:text-[11px] font-mono text-creme/50 uppercase tracking-[0.15em] sm:tracking-[0.2em]">
+            <a href="politica-de-privacidade.html" className="hover:text-creme transition-colors">Política de Privacidade</a>
+            <span className="hidden sm:inline opacity-30">·</span>
+            <a href="termos-de-uso.html" className="hover:text-creme transition-colors">Termos de Uso</a>
+            <span className="hidden sm:inline opacity-30">·</span>
+            <a href="politica-de-cookies.html" className="hover:text-creme transition-colors">Política de Cookies</a>
+          </div>
+          <div className="text-[9px] sm:text-[11px] font-mono text-creme/40 uppercase tracking-[0.15em] sm:tracking-[0.2em] mt-2 sm:mt-0">
+            Sua Carreira, Gerida com Intencionalidade.
+          </div>
         </div>
       </div>
     </footer>
@@ -1771,6 +1791,7 @@ export default function App() {
   const [showWhatsApp, setShowWhatsApp] = useState(false);
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isFooterVisible, setIsFooterVisible] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -1779,6 +1800,19 @@ export default function App() {
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Detect when footer is visible to fade out floating buttons
+  useEffect(() => {
+    const footer = document.querySelector('footer');
+    if (!footer) return;
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        setIsFooterVisible(entry.isIntersecting);
+      });
+    }, { root: null, threshold: 0.1 });
+    observer.observe(footer);
+    return () => observer.disconnect();
   }, []);
 
   // Handle hash scrolling on mount (e.g. index.html#programas)
@@ -1854,7 +1888,7 @@ export default function App() {
 
       {/* Floating Actions */}
       {!isMobileMenuOpen && showWhatsApp && (
-        <div className="fixed bottom-6 right-6 sm:bottom-8 sm:right-8 z-50 flex gap-3 sm:gap-4 items-center">
+        <div className={`fixed bottom-6 right-6 sm:bottom-8 sm:right-8 z-50 flex gap-3 sm:gap-4 items-center transition-all duration-300 ${isFooterVisible ? 'opacity-15 pointer-events-none' : 'opacity-100 pointer-events-auto'}`}>
           {/* WhatsApp Button */}
           <a
             href={`https://wa.me/5511940803333?text=${encodeURIComponent("Olá, vim pelo site e gostaria de mais informações.")}`}
