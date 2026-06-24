@@ -257,7 +257,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="min-h-screen pt-16 md:pt-18 lg:pt-20 flex items-center bg-creme overflow-hidden">
+    <section id="hero" className="min-h-screen pt-24 md:pt-18 lg:pt-20 flex items-center bg-creme overflow-hidden">
       <motion.div 
         variants={container}
         initial="hidden"
