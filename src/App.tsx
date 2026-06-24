@@ -257,12 +257,12 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="min-h-screen pt-24 md:pt-32 flex items-center bg-creme overflow-hidden">
+    <section id="hero" className="min-h-screen pt-20 md:pt-24 flex items-center bg-creme overflow-hidden">
       <motion.div 
         variants={container}
         initial="hidden"
         animate="show"
-        className="max-w-7xl mx-auto px-6 sm:px-8 py-12 md:py-16 grid grid-cols-1 md:grid-cols-[55%_45%] gap-12 lg:gap-20 items-center w-full"
+        className="max-w-7xl mx-auto px-6 sm:px-8 py-6 md:py-10 grid grid-cols-1 md:grid-cols-[55%_45%] gap-12 lg:gap-20 items-center w-full"
       >
         <div className="text-center md:text-left flex flex-col md:block">
           <motion.div variants={item} className="flex items-center justify-center md:justify-start gap-3 mb-5 order-1">
@@ -278,14 +278,14 @@ const Hero = () => {
             <span className="block italic text-highlight mt-1 md:mt-1.5">Estratégia para crescer.</span>
           </motion.h1>
           
-          <motion.p variants={item} className="text-base md:text-lg lg:text-[19px] text-ink/65 max-w-[540px] mx-auto md:mx-0 leading-relaxed mb-6 md:mb-8 order-3">
+          <motion.p variants={item} className="text-base md:text-lg lg:text-[19px] text-ink/65 max-w-[540px] mx-auto md:mx-0 leading-relaxed mb-5 md:mb-6 order-3">
             Mentoria em carreira e liderança para profissionais que desejam ampliar seu impacto, fortalecer seu posicionamento e crescer com intenção.
           </motion.p>
 
           {/* Destaque Turma Aberta Liderança Atualizada e Marca Intencional */}
           <motion.div 
             variants={item} 
-            className="mt-4 md:mt-6 mb-8 p-6 md:p-8 bg-[#FAF6F0] border border-verde/15 rounded-[32px] shadow-xl shadow-verde/5 text-left max-w-[540px] mx-auto md:mx-0 flex flex-col order-4"
+            className="mt-3 md:mt-4 mb-8 p-6 md:p-8 bg-[#FAF6F0] border border-verde/15 rounded-[32px] shadow-xl shadow-verde/5 text-left max-w-[540px] mx-auto md:mx-0 flex flex-col order-4"
           >
             <div className="flex flex-wrap items-center gap-2.5 mb-4">
               <span className="bg-verde text-creme text-[9px] uppercase tracking-[0.2em] font-black px-2.5 py-1 rounded-md">
@@ -407,7 +407,7 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.95, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.5 }}
-          className="relative rounded-[40px] md:rounded-[64px] overflow-hidden aspect-[4/5] bg-verde shadow-2xl border border-ink/5 hidden md:block w-full max-w-[500px] mx-auto md:max-w-none"
+          className="relative rounded-[40px] md:rounded-[64px] overflow-hidden aspect-[4/5] bg-verde shadow-2xl border border-ink/5 hidden md:block w-full max-w-[500px] mx-auto md:max-w-none md:self-start md:mt-12"
         >
           <img 
             src="https://i.ibb.co/mVqGg1yW/debora-hero-nova.webp" 
