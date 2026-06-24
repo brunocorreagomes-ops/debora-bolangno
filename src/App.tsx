@@ -257,36 +257,36 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="min-h-screen pt-20 md:pt-24 flex items-center bg-creme overflow-hidden">
+    <section id="hero" className="min-h-screen pt-16 md:pt-18 lg:pt-20 flex items-center bg-creme overflow-hidden">
       <motion.div 
         variants={container}
         initial="hidden"
         animate="show"
-        className="max-w-7xl mx-auto px-6 sm:px-8 py-4 md:py-6 grid grid-cols-1 md:grid-cols-[55%_45%] gap-12 lg:gap-20 items-center w-full"
+        className="max-w-7xl mx-auto px-6 sm:px-8 py-3 md:py-4 grid grid-cols-1 md:grid-cols-[55%_45%] gap-8 lg:gap-16 items-center w-full"
       >
         <div className="text-center md:text-left flex flex-col md:block">
-          <motion.div variants={item} className="flex items-center justify-center md:justify-start gap-3 mb-4 order-1">
+          <motion.div variants={item} className="flex items-center justify-center md:justify-start gap-3 mb-3 md:mb-3.5 order-1">
             <div className="w-10 h-px bg-verde-med"></div>
             <span className="text-[10px] md:text-[11px] uppercase tracking-[0.3em] text-verde-med font-black">
               Estrategista de Carreira · Débora Bolangno
             </span>
           </motion.div>
           
-          <motion.h1 variants={item} className="font-serif text-[clamp(28px,4.4vw,56px)] font-black leading-[1.12] text-ink mb-4 tracking-tight order-2">
+          <motion.h1 variants={item} className="font-serif text-[clamp(28px,4.1vw,52px)] font-black leading-[1.1] text-ink mb-2.5 md:mb-3 tracking-tight order-2">
             <span className="block">Clareza para decidir.</span>
             <span className="block text-ink/90">Confiança para agir.</span>
             <span className="block italic text-highlight mt-1 md:mt-1.5">Estratégia para crescer.</span>
           </motion.h1>
-           <motion.p variants={item} className="text-base md:text-lg lg:text-[18px] text-ink/65 max-w-[540px] mx-auto md:mx-0 leading-relaxed mb-4 md:mb-5 order-3">
-            Programas de desenvolvimento para quem deseja crescer com mais estratégia, presença e impacto.
+           <motion.p variants={item} className="text-base md:text-[17px] lg:text-[18px] text-ink/70 max-w-[620px] md:max-w-none mx-auto md:mx-0 leading-relaxed mb-3 md:mb-4 order-3 lg:whitespace-nowrap">
+            Programas ao vivo para fortalecer liderança, presença executiva e posicionamento.
           </motion.p>
 
           {/* Destaque Turma Aberta Liderança Atualizada e Marca Intencional */}
           <motion.div 
             variants={item} 
-            className="mt-1 md:mt-2 mb-5 p-5 bg-[#FCF9F3] border-2 border-verde/20 rounded-[32px] shadow-2xl shadow-verde/10 hover:border-verde/30 transition-all duration-300 text-left max-w-[540px] lg:max-w-[580px] mx-auto md:mx-0 flex flex-col order-4"
+            className="mt-1 md:mt-1.5 mb-5 p-4 sm:p-4.5 bg-[#FCF9F3] border-2 border-verde/20 rounded-[32px] shadow-2xl shadow-verde/10 hover:border-verde/30 transition-all duration-300 text-left max-w-[540px] lg:max-w-[580px] mx-auto md:mx-0 flex flex-col order-4"
           >
-            <div className="flex flex-wrap items-center gap-2.5 mb-4">
+            <div className="flex flex-wrap items-center gap-2.5 mb-3.5">
               <span className="bg-verde text-creme text-[9px] uppercase tracking-[0.25em] font-black px-3 py-1 rounded-md">
                 INSCRIÇÕES ABERTAS
               </span>
@@ -295,17 +295,17 @@ const Hero = () => {
               </span>
             </div>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {/* Programa 1: Liderança Atualizada */}
-              <div className="bg-white border-2 border-verde/10 rounded-2xl p-4 hover:border-verde/30 hover:-translate-y-1 hover:shadow-xl hover:shadow-verde/5 transition-all duration-300 flex flex-col justify-between group/card">
+              <div className="bg-white border-2 border-verde/10 rounded-2xl p-3.5 sm:p-4 hover:border-verde/30 hover:-translate-y-1 hover:shadow-xl hover:shadow-verde/5 transition-all duration-300 flex flex-col justify-between group/card">
                 <div>
-                  <div className="flex flex-col gap-1.5 mb-2.5">
-                    <h4 className="font-serif text-[20px] sm:text-[21px] md:text-[22px] font-black text-verde leading-tight tracking-tight">Liderança Atualizada</h4>
-                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[8.5px] font-black tracking-widest bg-verde/5 text-verde-med uppercase self-start">
+                  <div className="flex flex-col gap-1 mb-2">
+                    <h4 className="font-serif text-[19px] sm:text-[20px] md:text-[21px] font-black text-verde leading-tight tracking-tight">Liderança Atualizada</h4>
+                    <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[8.5px] font-black tracking-widest bg-verde/5 text-verde-med uppercase self-start">
                       ENCONTROS SEMANAIS
                     </span>
                   </div>
-
+ 
                   <div className="space-y-1 text-[11px] mb-2 border-t border-verde/5 pt-2">
                     <div className="flex items-center gap-1.5 text-ink font-semibold">
                       <Calendar size={12} className="text-dourado shrink-0" />
@@ -317,13 +317,13 @@ const Hero = () => {
                     </div>
                   </div>
                 </div>
-
-                <div className="flex flex-col gap-2 mt-3 pt-3 border-t border-verde/5">
+ 
+                <div className="flex flex-col gap-1.5 mt-2.5 pt-2.5 border-t border-verde/5">
                   <a 
                     href="https://wa.me/5511940803333?text=Ol%C3%A1%2C%20gostaria%20de%20garantir%20minha%20vaga%20na%20turma%20de%20agosto%20da%20mentoria%20Lideran%C3%A7a%20Atualizada."
                     target="_blank"
                     rel="noopener"
-                    className="inline-flex items-center justify-center bg-verde text-creme hover:bg-[#112e28] hover:text-white text-[10px] font-black uppercase tracking-wider py-3 px-4 rounded-full shadow-md hover:shadow-lg transition-all duration-200 text-center"
+                    className="inline-flex items-center justify-center bg-verde text-creme hover:bg-[#112e28] hover:text-white text-[10px] font-black uppercase tracking-wider py-2.5 px-4 rounded-full shadow-md hover:shadow-lg transition-all duration-200 text-center"
                   >
                     GARANTIR MINHA VAGA
                   </a>
@@ -336,17 +336,17 @@ const Hero = () => {
                   </a>
                 </div>
               </div>
-
+ 
               {/* Programa 2: Marca Intencional */}
-              <div className="bg-white border-2 border-verde/10 rounded-2xl p-4 hover:border-verde/30 hover:-translate-y-1 hover:shadow-xl hover:shadow-verde/5 transition-all duration-300 flex flex-col justify-between group/card">
+              <div className="bg-white border-2 border-verde/10 rounded-2xl p-3.5 sm:p-4 hover:border-verde/30 hover:-translate-y-1 hover:shadow-xl hover:shadow-verde/5 transition-all duration-300 flex flex-col justify-between group/card">
                 <div>
-                  <div className="flex flex-col gap-1.5 mb-2.5">
-                    <h4 className="font-serif text-[20px] sm:text-[21px] md:text-[22px] font-black text-verde leading-tight tracking-tight">Marca Intencional</h4>
-                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[8.5px] font-black tracking-widest bg-dourado/10 text-[#8c744c] uppercase self-start">
+                  <div className="flex flex-col gap-1 mb-2">
+                    <h4 className="font-serif text-[19px] sm:text-[20px] md:text-[21px] font-black text-verde leading-tight tracking-tight">Marca Intencional</h4>
+                    <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[8.5px] font-black tracking-widest bg-dourado/10 text-[#8c744c] uppercase self-start">
                       ENCONTROS QUINZENAIS
                     </span>
                   </div>
-
+ 
                   <div className="space-y-1 text-[11px] mb-2 border-t border-verde/5 pt-2">
                     <div className="flex items-center gap-1.5 text-ink font-semibold">
                       <Calendar size={12} className="text-dourado shrink-0" />
@@ -358,13 +358,13 @@ const Hero = () => {
                     </div>
                   </div>
                 </div>
-
-                <div className="flex flex-col gap-2 mt-3 pt-3 border-t border-verde/5">
+ 
+                <div className="flex flex-col gap-1.5 mt-2.5 pt-2.5 border-t border-verde/5">
                   <a 
                     href="https://wa.me/5511940803333?text=Ol%C3%A1%2C%20D%C3%A9bora!%20Tenho%20interesse%20em%20garantir%20minha%20vaga%20na%20turma%20de%20Marca%20Intencional."
                     target="_blank"
                     rel="noopener"
-                    className="inline-flex items-center justify-center bg-verde text-creme hover:bg-[#112e28] hover:text-white text-[10px] font-black uppercase tracking-wider py-3 px-4 rounded-full shadow-md hover:shadow-lg transition-all duration-200 text-center"
+                    className="inline-flex items-center justify-center bg-verde text-creme hover:bg-[#112e28] hover:text-white text-[10px] font-black uppercase tracking-wider py-2.5 px-4 rounded-full shadow-md hover:shadow-lg transition-all duration-200 text-center"
                   >
                     GARANTIR MINHA VAGA
                   </a>
