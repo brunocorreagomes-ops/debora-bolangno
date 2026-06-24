@@ -257,7 +257,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="min-h-screen pt-16 md:pt-18 flex items-center bg-creme overflow-hidden">
+    <section id="hero" className="min-h-screen pt-20 md:pt-24 flex items-center bg-creme overflow-hidden">
       <motion.div 
         variants={container}
         initial="hidden"
@@ -277,37 +277,32 @@ const Hero = () => {
             <span className="block text-ink/90">Confiança para agir.</span>
             <span className="block italic text-highlight mt-1 md:mt-1.5">Estratégia para crescer.</span>
           </motion.h1>
-           <motion.p variants={item} className="text-base md:text-lg lg:text-[18px] text-ink/65 max-w-[540px] mx-auto md:mx-0 leading-relaxed mb-3 md:mb-4 order-3">
-            Mentoria em carreira e liderança para profissionais que desejam ampliar seu impacto, fortalecer seu posicionamento e crescer com intenção.
+           <motion.p variants={item} className="text-base md:text-lg lg:text-[18px] text-ink/65 max-w-[540px] mx-auto md:mx-0 leading-relaxed mb-4 md:mb-5 order-3">
+            Programas de desenvolvimento para quem deseja crescer com mais estratégia, presença e impacto.
           </motion.p>
 
           {/* Destaque Turma Aberta Liderança Atualizada e Marca Intencional */}
           <motion.div 
             variants={item} 
-            className="mt-1 md:mt-2 mb-5 p-4 sm:p-5 bg-[#FAF6F0] border border-verde/15 rounded-[32px] shadow-xl shadow-verde/5 text-left max-w-[540px] lg:max-w-[580px] mx-auto md:mx-0 flex flex-col order-4"
+            className="mt-1 md:mt-2 mb-5 p-5 bg-[#FCF9F3] border-2 border-verde/20 rounded-[32px] shadow-2xl shadow-verde/10 hover:border-verde/30 transition-all duration-300 text-left max-w-[540px] lg:max-w-[580px] mx-auto md:mx-0 flex flex-col order-4"
           >
-            <div className="flex flex-wrap items-center gap-2.5 mb-2">
-              <span className="bg-verde text-creme text-[9px] uppercase tracking-[0.2em] font-black px-2.5 py-1 rounded-md">
-                TURMAS ABERTAS
+            <div className="flex flex-wrap items-center gap-2.5 mb-4">
+              <span className="bg-verde text-creme text-[9px] uppercase tracking-[0.25em] font-black px-3 py-1 rounded-md">
+                INSCRIÇÕES ABERTAS
               </span>
-              <span className="text-[10px] uppercase tracking-[0.12em] text-verde-med font-extrabold flex items-center gap-1.5">
+              <span className="text-[10px] uppercase tracking-[0.15em] text-verde-med font-extrabold flex items-center gap-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-dourado animate-pulse"></span> AGOSTO E SETEMBRO 2026
               </span>
             </div>
             
-            <h3 className="font-serif text-[16px] md:text-lg font-black text-ink mb-0.5 leading-tight">Escolha a turma ideal para o seu momento</h3>
-            <p className="text-[11px] md:text-xs text-ink/65 mb-3 leading-relaxed">
-              Dois programas ao vivo, com propostas diferentes e vagas abertas agora.
-            </p>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
               {/* Programa 1: Liderança Atualizada */}
-              <div className="bg-white border border-verde/10 rounded-2xl p-3.5 hover:border-verde/20 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+              <div className="bg-white border-2 border-verde/10 rounded-2xl p-4 hover:border-verde/30 hover:-translate-y-1 hover:shadow-xl hover:shadow-verde/5 transition-all duration-300 flex flex-col justify-between group/card">
                 <div>
                   <div className="flex flex-col gap-1.5 mb-2.5">
-                    <h4 className="font-serif text-[17px] sm:text-[18px] md:text-[19px] lg:text-[20px] font-black text-verde leading-tight tracking-tight">Liderança Atualizada</h4>
-                    <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[8.5px] font-black tracking-wider bg-verde/5 text-verde-med uppercase self-start">
-                      Turma semanal
+                    <h4 className="font-serif text-[20px] sm:text-[21px] md:text-[22px] font-black text-verde leading-tight tracking-tight">Liderança Atualizada</h4>
+                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[8.5px] font-black tracking-widest bg-verde/5 text-verde-med uppercase self-start">
+                      ENCONTROS SEMANAIS
                     </span>
                   </div>
 
@@ -323,22 +318,32 @@ const Hero = () => {
                   </div>
                 </div>
 
-                <a 
-                  href="lideranca-atualizada.html" 
-                  className="inline-flex items-center gap-1 text-[10.5px] font-black text-verde hover:text-dourado uppercase tracking-wider transition-all duration-300 self-start group/link border-b-2 border-verde/20 hover:border-dourado pb-0.5 mt-2"
-                >
-                  <span>Garantir minha vaga</span>
-                  <ArrowRight size={12} className="transition-transform duration-300 group-hover/link:translate-x-1 text-verde group-hover/link:text-dourado" />
-                </a>
+                <div className="flex flex-col gap-2 mt-3 pt-3 border-t border-verde/5">
+                  <a 
+                    href="https://wa.me/5511940803333?text=Ol%C3%A1%2C%20gostaria%20de%20garantir%20minha%20vaga%20na%20turma%20de%20agosto%20da%20mentoria%20Lideran%C3%A7a%20Atualizada."
+                    target="_blank"
+                    rel="noopener"
+                    className="inline-flex items-center justify-center bg-verde text-creme hover:bg-[#112e28] hover:text-white text-[10px] font-black uppercase tracking-wider py-3 px-4 rounded-full shadow-md hover:shadow-lg transition-all duration-200 text-center"
+                  >
+                    GARANTIR MINHA VAGA
+                  </a>
+                  <a 
+                    href="lideranca-atualizada.html" 
+                    className="inline-flex items-center justify-center gap-1 text-[10px] font-black text-verde/80 hover:text-verde hover:bg-verde/5 border border-verde/15 hover:border-verde/35 uppercase tracking-wider transition-all duration-200 text-center py-2 rounded-full"
+                  >
+                    <span>VER PROGRAMA</span>
+                    <ArrowRight size={10} />
+                  </a>
+                </div>
               </div>
 
               {/* Programa 2: Marca Intencional */}
-              <div className="bg-white border border-verde/10 rounded-2xl p-3.5 hover:border-verde/20 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+              <div className="bg-white border-2 border-verde/10 rounded-2xl p-4 hover:border-verde/30 hover:-translate-y-1 hover:shadow-xl hover:shadow-verde/5 transition-all duration-300 flex flex-col justify-between group/card">
                 <div>
                   <div className="flex flex-col gap-1.5 mb-2.5">
-                    <h4 className="font-serif text-[17px] sm:text-[18px] md:text-[19px] lg:text-[20px] font-black text-verde leading-tight tracking-tight">Marca Intencional</h4>
-                    <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[8.5px] font-black tracking-wider bg-dourado/10 text-[#8c744c] uppercase self-start">
-                      Turma quinzenal
+                    <h4 className="font-serif text-[20px] sm:text-[21px] md:text-[22px] font-black text-verde leading-tight tracking-tight">Marca Intencional</h4>
+                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[8.5px] font-black tracking-widest bg-dourado/10 text-[#8c744c] uppercase self-start">
+                      ENCONTROS QUINZENAIS
                     </span>
                   </div>
 
@@ -354,27 +359,27 @@ const Hero = () => {
                   </div>
                 </div>
 
-                <a 
-                  href="marca-intencional.html" 
-                  className="inline-flex items-center gap-1 text-[10.5px] font-black text-verde hover:text-dourado uppercase tracking-wider transition-all duration-300 self-start group/link border-b-2 border-verde/20 hover:border-dourado pb-0.5 mt-2"
-                >
-                  <span>Garantir minha vaga</span>
-                  <ArrowRight size={12} className="transition-transform duration-300 group-hover/link:translate-x-1 text-verde group-hover/link:text-dourado" />
-                </a>
+                <div className="flex flex-col gap-2 mt-3 pt-3 border-t border-verde/5">
+                  <a 
+                    href="https://wa.me/5511940803333?text=Ol%C3%A1%2C%20D%C3%A9bora!%20Tenho%20interesse%20em%20garantir%20minha%20vaga%20na%20turma%20de%20Marca%20Intencional."
+                    target="_blank"
+                    rel="noopener"
+                    className="inline-flex items-center justify-center bg-verde text-creme hover:bg-[#112e28] hover:text-white text-[10px] font-black uppercase tracking-wider py-3 px-4 rounded-full shadow-md hover:shadow-lg transition-all duration-200 text-center"
+                  >
+                    GARANTIR MINHA VAGA
+                  </a>
+                  <a 
+                    href="marca-intencional.html" 
+                    className="inline-flex items-center justify-center gap-1 text-[10px] font-black text-verde/80 hover:text-verde hover:bg-verde/5 border border-verde/15 hover:border-verde/35 uppercase tracking-wider transition-all duration-200 text-center py-2 rounded-full"
+                  >
+                    <span>VER PROGRAMA</span>
+                    <ArrowRight size={10} />
+                  </a>
+                </div>
               </div>
             </div>
           </motion.div>
-          
-          {/* CTAs da Hero (Principal & Secundário) */}
-          <motion.div variants={item} className="order-5 mb-5 md:mb-6 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-            <a 
-              href="#programas" 
-              className="inline-flex items-center justify-center gap-4 bg-verde text-white px-8 md:px-10 py-4 rounded-full text-[11px] md:text-[12px] uppercase tracking-[0.25em] font-bold transition-all hover:bg-[#112e28] hover:-translate-y-px shadow-xl shadow-verde/20 group w-full sm:w-auto animate-pulse-subtle"
-            >
-              Ver turmas abertas
-              <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
-            </a>
-          </motion.div>
+
 
           {/* Imagem da Débora (Mobile Only) */}
           <motion.div 
