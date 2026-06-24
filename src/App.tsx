@@ -774,7 +774,7 @@ const Triagem = () => {
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-[10px] uppercase tracking-[0.4em] font-black text-highlight block mb-6 text-center"
+          className="text-[10px] uppercase tracking-[0.4em] font-black text-dourado block mb-6 text-center"
         >
           Seu momento
         </motion.span>
@@ -794,21 +794,21 @@ const Triagem = () => {
               num: "01",
               title: "Falta de direção",
               desc: "Tenho competência, mas me falta clareza. Sinto que estou aquém do meu potencial e não sei qual é o próximo passo certo.",
-              label: "Marca Intencional"
+              label: "Conhecer Marca Intencional"
             },
             {
               href: "mentoria-individual.html",
               num: "02",
               title: "Liderança travada",
               desc: "Meu time depende demais de mim. Preciso evoluir como líder e gerar resultado sem precisar estar em tudo.",
-              label: "Mentoria"
+              label: "Conhecer Mentoria"
             },
             {
               href: "sequoia.html",
               num: "03",
               title: "Crescimento isolado",
               desc: "Falta troca com pessoas no meu nível. Quero crescer junto com quem entende o jogo — não sozinho.",
-              label: "Comunidade Sequoia"
+              label: "Conhecer Comunidade Sequoia"
             }
           ].map((item, i) => (
             <motion.a 
@@ -818,12 +818,14 @@ const Triagem = () => {
               viewport={{ once: true }}
               transition={{ delay: i * 0.15, duration: 0.7 }}
               href={item.href} 
-              className="group bg-white/5 border border-white/10 p-8 md:p-12 rounded-[40px] transition-all hover:bg-highlight/10 hover:border-highlight/50 hover:-translate-y-2 relative overflow-hidden"
+              className="group bg-[#FAF8F3] border border-dourado/20 hover:border-dourado/50 hover:shadow-[0_20px_50px_rgba(26,58,46,0.25)] hover:-translate-y-2 p-8 md:p-12 rounded-[40px] transition-all duration-300 relative overflow-hidden flex flex-col justify-between h-full"
             >
-              <div className="font-serif text-[48px] md:text-[64px] font-black text-highlight/20 leading-none mb-8">{item.num}</div>
-              <h3 className="font-serif text-2xl md:text-3xl font-bold text-creme mb-6">{item.title}</h3>
-              <p className="text-[15px] md:text-[16px] text-creme/50 leading-relaxed mb-10">{item.desc}</p>
-              <span className="text-[10px] md:text-[11px] uppercase tracking-[0.2em] font-bold text-highlight flex items-center gap-3 group-hover:gap-5 transition-all">
+              <div>
+                <div className="font-serif text-[56px] md:text-[72px] font-black text-dourado leading-none mb-6 transition-transform duration-300 group-hover:scale-105 origin-left">{item.num}</div>
+                <h3 className="font-serif text-2xl md:text-3xl font-bold text-verde mb-4 leading-tight group-hover:text-verde-med transition-colors">{item.title}</h3>
+                <p className="text-[15px] md:text-[16px] text-ink/75 leading-relaxed mb-10 font-sans">{item.desc}</p>
+              </div>
+              <span className="text-[10px] md:text-[11px] uppercase tracking-[0.2em] font-extrabold text-verde flex items-center gap-2 group-hover:gap-4 group-hover:text-verde-med transition-all mt-auto">
                 {item.label} <ArrowRight size={16} />
               </span>
             </motion.a>
