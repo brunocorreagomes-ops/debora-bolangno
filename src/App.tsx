@@ -499,9 +499,9 @@ const Identification = () => {
   ];
 
   return (
-    <section id="metodologia" className="bg-white py-24 md:py-32 px-6 sm:px-8">
+    <section id="metodologia" style={{ backgroundColor: '#F3EEE6' }} className="py-20 md:py-24 px-6 sm:px-8 border-y border-ink/5">
       <div className="max-w-7xl mx-auto">
-        <div className="max-w-[800px] mx-auto text-center mb-16 md:mb-24">
+        <div className="max-w-[800px] mx-auto text-center mb-12 md:mb-16">
           <motion.span 
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -530,12 +530,12 @@ const Identification = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.6 }}
-              className="flex gap-6 bg-creme/30 p-8 md:p-10 rounded-[40px] border border-transparent hover:border-dourado/30 transition-all hover:bg-creme/50 group"
+              className="flex gap-6 bg-white p-6 md:p-8 rounded-[24px] border border-dourado/25 shadow-[0_4px_20px_rgba(26,58,46,0.06)] hover:-translate-y-1 hover:shadow-[0_12px_28px_rgba(26,58,46,0.12)] hover:border-dourado/60 transition-all duration-300 group"
             >
-              <div className="w-12 h-12 rounded-2xl bg-dourado/10 flex items-center justify-center shrink-0 group-hover:bg-dourado/20 transition-colors">
-                <Check size={20} className="text-dourado" />
+              <div className="w-12 h-12 rounded-2xl bg-dourado/20 flex items-center justify-center shrink-0 group-hover:bg-dourado/30 transition-colors duration-300">
+                <Check size={20} className="text-verde font-bold" />
               </div>
-              <p className="text-[16px] md:text-[18px] text-ink/75 leading-relaxed font-medium">{point}</p>
+              <p className="text-[16px] md:text-[18px] text-ink leading-relaxed font-semibold">{point}</p>
             </motion.div>
           ))}
         </div>
@@ -545,7 +545,7 @@ const Identification = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.8 }}
-          className="mt-24 text-center font-cormorant text-[24px] md:text-[32px] font-semibold text-verde/60 italic max-w-3xl mx-auto leading-relaxed"
+          className="mt-16 md:mt-20 text-center font-cormorant text-[24px] md:text-[32px] font-semibold text-verde/60 italic max-w-3xl mx-auto leading-relaxed"
         >
           "O esforço sem direção consome.<br />A estratégia clara liberta."
         </motion.p>
