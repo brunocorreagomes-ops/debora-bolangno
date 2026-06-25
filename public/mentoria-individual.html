@@ -44,7 +44,112 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mentoria Individual | Débora Bolangno</title>
+    <title>Mentoria Individual | Mentoria de Carreira com Débora Bolangno</title>
+    <meta name="description" content="Acelere sua carreira executiva com Débora Bolangno. Mentoria de liderança, presença executiva e estratégia de carreira para profissionais de alto impacto." />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://deborabolangno.com.br/mentoria-individual.html" />
+    <meta property="og:title" content="Mentoria Individual | Mentoria de Carreira com Débora Bolangno" />
+    <meta property="og:description" content="Acelere sua carreira executiva com Débora Bolangno. Mentoria de liderança, presença executiva e estratégia de carreira para profissionais de alto impacto." />
+    <meta property="og:image" content="https://i.ibb.co/yByCnzV3/Debora-mentoria-individual.webp" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://deborabolangno.com.br/#person",
+          "name": "Débora Bolangno",
+          "url": "https://deborabolangno.com.br",
+          "jobTitle": "Estrategista de Carreira e Liderança Executiva",
+          "description": "Estrategista de carreira e liderança corporativa, mentora de executivos com mais de 20 anos de experiência corporativa."
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://deborabolangno.com.br/#website",
+          "url": "https://deborabolangno.com.br",
+          "name": "Débora Bolangno"
+        },
+        {
+          "@type": "Service",
+          "@id": "https://deborabolangno.com.br/mentoria-individual.html#service",
+          "name": "Mentoria Individual",
+          "provider": {
+            "@id": "https://deborabolangno.com.br/#person"
+          },
+          "description": "Acelere sua carreira executiva com Débora Bolangno. Mentoria de liderança, presença executiva e estratégia de carreira para profissionais de alto impacto.",
+          "serviceType": "Coaching & Mentoria de Carreira Individual"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://deborabolangno.com.br/mentoria-individual.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://deborabolangno.com.br/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Mentoria Individual",
+              "item": "https://deborabolangno.com.br/mentoria-individual.html"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://deborabolangno.com.br/mentoria-individual.html#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Como funciona a mentoria individual de carreira?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "É um processo 100% focado no seu momento de carreira. Mapeamos seus objetivos, analisamos seus desafios corporativos de posicionamento ou transição e traçamos uma estratégia com planos de ação práticos para cada etapa."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Qual é a duração e a frequência dos encontros?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "O processo padrão é composto por 8 encontros individuais de 1 hora, realizados quinzenalmente online (via Zoom) ou presencialmente em São Paulo/Osasco."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "O processo é confidencial?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Absolutamente. Todo o conteúdo discutido nas sessões, desafios trazidos e planos de desenvolvimento são protegidos por sigilo e confidencialidade total."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "A mentoria individual serve para transição de carreira?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sim. É ideal para profissionais seniores que desejam migrar de área, se recolocar no mercado ou se preparar para posições executivas de maior visibilidade e complexidade estratégica."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Como agendar a primeira sessão de alinhamento?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Você pode clicar no botão de contato do WhatsApp para agendar uma sessão de alinhamento inicial rápida e gratuita, onde entenderemos seus desafios atuais e desenharemos o formato ideal de processo."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -454,6 +559,40 @@
             box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
             background-color: #ffffff;
         }
+
+        /* FAQ Styling */
+        .faq-section {
+            background-color: #FAF7F2;
+            padding: 80px 24px;
+        }
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            border-bottom: 1px solid rgba(26, 58, 46, 0.1);
+            padding: 24px 0;
+        }
+        .faq-question {
+            font-size: 20px;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-family: var(--font-display);
+            transition: color 0.3s;
+            color: var(--brand-green);
+        }
+        .faq-question:hover { color: var(--brand-gold); }
+        .faq-answer {
+            margin-top: 16px;
+            font-size: 16px;
+            color: rgba(18, 18, 18, 0.75);
+            display: none;
+            line-height: 1.7;
+            max-width: 820px;
+        }
     </style>
 </head>
 <body>
@@ -688,6 +827,65 @@
         </div>
     </section>
  
+    <!-- FAQ SECTION -->
+    <section class="py-20 md:py-28 bg-[#FCFAF7] border-t border-b border-ink/5">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="section-eyebrow text-center">FAQ Estratégico</span>
+                <h2 class="font-serif text-3xl md:text-5xl font-black text-verde">Perguntas <i>Frequentes</i></h2>
+                <p class="text-ink/60 text-sm md:text-base max-w-xl mx-auto mt-4">Esclareça suas dúvidas sobre o processo personalizado de Coaching e Mentoria de Carreira.</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Como funciona a mentoria individual de carreira?</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="transition-transform duration-300"><path d="m6 9 6 6 6-6"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        É um processo 100% individualizado e desenhado especificamente para o seu momento de carreira. Mapeamos os seus objetivos, analisamos de forma estratégica seus desafios corporativos de posicionamento, liderança ou transição de carreira, e estruturamos planos de ação altamente acionáveis.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Qual é a duração e a frequência dos encontros?</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="transition-transform duration-300"><path d="m6 9 6 6 6-6"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        O processo padrão é composto por 8 encontros individuais com duração de 1 hora cada. As sessões ocorrem preferencialmente de forma quinzenal e podem ser realizadas online via Zoom ou presencialmente em São Paulo/Osasco.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>O processo é confidencial?</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="transition-transform duration-300"><path d="m6 9 6 6 6-6"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        Absolutamente. Todo o conteúdo compartilhado durante as sessões, incluindo os desafios organizacionais trazidos, histórico profissional e planos estratégicos de desenvolvimento, é protegido por termos rigorosos de sigilo e confidencialidade.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>A mentoria individual serve para transição de carreira?</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="transition-transform duration-300"><path d="m6 9 6 6 6-6"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        Sim, com certeza. É recomendada para profissionais seniores que buscam mudar de área, recolocar-se estrategicamente no mercado corporativo, negociar promoções internas ou preparar-se para posições executivas de alto escalão.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Como agendar a primeira sessão de alinhamento?</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="transition-transform duration-300"><path d="m6 9 6 6 6-6"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        Você pode clicar em qualquer um dos botões de agendamento ou entrar em contato pelo WhatsApp para marcar uma sessão de alinhamento inicial. Esse encontro rápido serve para entender seu panorama atual e estruturar a mentoria.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="cta-section py-20 md:py-40 bg-creme border-t border-ink/5">
         <div class="container text-center">
             <h2 class="text-3xl md:text-5xl font-serif mb-8 leading-tight text-verde">Pronto para o <i>seu próximo</i> passo?</h2>
@@ -761,6 +959,31 @@
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
         </button>
     </div>
+
+    <script>
+        // FAQ Accordion Toggle
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            const answer = item.querySelector('.faq-answer');
+            const svg = item.querySelector('svg');
+
+            question.addEventListener('click', () => {
+                const isOpen = answer.style.display === 'block';
+                
+                // Close all other items
+                faqItems.forEach(otherItem => {
+                    otherItem.querySelector('.faq-answer').style.display = 'none';
+                    otherItem.querySelector('svg').style.transform = 'rotate(0deg)';
+                });
+
+                if (!isOpen) {
+                    answer.style.display = 'block';
+                    svg.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>

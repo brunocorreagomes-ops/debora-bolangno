@@ -1,68 +1,52 @@
-<!doctype html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Débora Bolangno | Mentoria de Carreira e Liderança Executiva</title>
-    <meta name="description" content="Acelere sua carreira executiva com Débora Bolangno. Mentoria de liderança, presença executiva e estratégia de carreira para profissionais de alto impacto." />
-    <meta name="keywords" content="mentoria de carreira, liderança executiva, presença executiva, coaching executivo, débora bolangno, desenvolvimento de liderança" />
-    <meta name="author" content="Débora Bolangno" />
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://deborabolangno.com.br/" />
-    <meta property="og:title" content="Débora Bolangno | Mentoria de Carreira e Liderança" />
-    <meta property="og:description" content="Clareza estratégica para acelerar sua carreira executiva e desenvolver liderança de alto impacto." />
-    <meta property="og:image" content="https://i.ibb.co/1JncYjFL/Debora-Ensaio-Novo-3.jpg" />
-    <meta property="twitter:image" content="https://i.ibb.co/1JncYjFL/Debora-Ensaio-Novo-3.jpg" />
+import * as React from 'react';
+import { renderToString } from 'react-dom/server';
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
-
-            <!-- Fix for "Uncaught TypeError: Cannot set property fetch of #<Window> which has only a getter" -->
-    <script>
-      (function() {
-        try {
-          var _fetch = window.fetch || (typeof Window !== 'undefined' && Window.prototype ? Window.prototype.fetch : null);
-          if (!_fetch) return;
-
-          var currentFetch = _fetch;
-
-          var descriptor = {
-            configurable: true,
-            enumerable: true,
-            get: function() {
-              return currentFetch;
-            },
-            set: function(v) {
-              currentFetch = v;
-            }
-          };
-
-          // Try defining getter/setter on window
-          try {
-            Object.defineProperty(window, 'fetch', descriptor);
-          } catch (e) {
-            // Safe to ignore or log
-          }
-
-          // Try defining getter/setter on Window.prototype
-          if (typeof Window !== 'undefined' && Window.prototype) {
-            try {
-              Object.defineProperty(Window.prototype, 'fetch', descriptor);
-            } catch (e) {
-              // Safe to ignore or log
-            }
-          }
-        } catch (err) {
-          console.error('Error during fetch patch:', err);
+// Override global modules for mock
+import Module from 'module';
+const originalRequire = Module.prototype.require;
+Module.prototype.require = function(request) {
+  if (request === 'lucide-react') {
+    return new Proxy({}, {
+      get: (_, prop) => {
+        if (prop === '__esModule') return true;
+        return ({ size, className }) => React.createElement('i', { className, 'data-icon': prop }, `icon-${prop}`);
+      }
+    });
+  }
+  if (request === 'motion/react') {
+    return {
+      __esModule: true,
+      AnimatePresence: ({ children }) => React.createElement(React.Fragment, null, children),
+      useScroll: () => ({ scrollYProgress: 0 }),
+      useTransform: () => 0,
+      motion: new Proxy({}, {
+        get: (_, prop) => {
+          if (prop === 'div') return function(props) { const p = {...props}; delete p.initial; delete p.animate; delete p.whileInView; delete p.viewport; delete p.transition; delete p.variants; return React.createElement('div', p); };
+          if (prop === 'span') return function(props) { const p = {...props}; delete p.initial; delete p.animate; delete p.whileInView; delete p.viewport; delete p.transition; delete p.variants; return React.createElement('span', p); };
+          if (prop === 'h1') return function(props) { const p = {...props}; delete p.initial; delete p.animate; delete p.whileInView; delete p.viewport; delete p.transition; delete p.variants; return React.createElement('h1', p); };
+          if (prop === 'h2') return function(props) { const p = {...props}; delete p.initial; delete p.animate; delete p.whileInView; delete p.viewport; delete p.transition; delete p.variants; return React.createElement('h2', p); };
+          if (prop === 'h3') return function(props) { const p = {...props}; delete p.initial; delete p.animate; delete p.whileInView; delete p.viewport; delete p.transition; delete p.variants; return React.createElement('h3', p); };
+          if (prop === 'p') return function(props) { const p = {...props}; delete p.initial; delete p.animate; delete p.whileInView; delete p.viewport; delete p.transition; delete p.variants; return React.createElement('p', p); };
+          if (prop === 'a') return function(props) { const p = {...props}; delete p.initial; delete p.animate; delete p.whileInView; delete p.viewport; delete p.transition; delete p.variants; return React.createElement('a', p); };
+          if (prop === 'img') return function(props) { const p = {...props}; delete p.initial; delete p.animate; delete p.whileInView; delete p.viewport; delete p.transition; delete p.variants; return React.createElement('img', p); };
+          if (prop === 'article') return function(props) { const p = {...props}; delete p.initial; delete p.animate; delete p.whileInView; delete p.viewport; delete p.transition; delete p.variants; return React.createElement('article', p); };
+          if (prop === 'button') return function(props) { const p = {...props}; delete p.initial; delete p.animate; delete p.whileInView; delete p.viewport; delete p.transition; delete p.variants; return React.createElement('button', p); };
+          return function(props) { const p = {...props}; delete p.initial; delete p.animate; delete p.whileInView; delete p.viewport; delete p.transition; delete p.variants; return React.createElement('div', p); };
         }
-      })();
-    </script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+      })
+    };
+  }
+  return originalRequire.apply(this, arguments);
+};
+
+import fs from 'fs';
+import App from './out-app.mjs';
+
+try {
+  const html = renderToString(React.createElement(App.default || App));
+  fs.writeFileSync('rendered.html', html);
+  console.log("Written to rendered.html successfully.");
+} catch (e) {
+  console.error("Render failed");
+  console.error(e);
+}

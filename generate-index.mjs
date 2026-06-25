@@ -1,57 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@300;400;500;600;700&display=swap');
-@import "tailwindcss";
+import fs from 'fs';
 
-@theme {
-  --font-sans: "Jost", ui-sans-serif, system-ui, sans-serif;
-  --font-serif: "Playfair Display", serif;
-  --font-cormorant: "Cormorant Garamond", serif;
+const origHtml = fs.readFileSync('index.html', 'utf-8');
+const renderedHtml = fs.readFileSync('rendered.html', 'utf-8');
 
-  --color-verde: #1a3a2e;
-  --color-verde-med: #2d5a47;
-  --color-verde-claro: #658f86;
-  --color-creme: #F9F7F2;
-  --color-creme-light: #f5f0e8;
-  --color-dourado: #bca374;
-  --color-dourado-rich: #c9a96e;
-  --color-ink: #121212;
-  --color-highlight: #09778b;
+// Insert Schema.org before </head>
+const schema = `
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Débora Bolangno",
+      "description": "Mentoria de carreira e liderança executiva",
+      "url": "https://deborabolangno.com.br"
+    }
+    </script>
+`;
 
-  --color-brand-50: #f4f7f6;
-  --color-brand-100: #e9efee;
-  --color-brand-200: #c8d7d4;
-  --color-brand-300: #a7bfba;
-  --color-brand-400: #658f86;
-  --color-brand-500: #235f52;
-  --color-brand-600: #1f564a;
-  --color-brand-700: #1a473d;
-  --color-brand-800: #153931;
-  --color-brand-900: #112e28;
-  --color-brand-950: #091916;
-}
+let newHtml = origHtml.replace('</head>', schema + '\n  </head>');
 
-@layer base {
-  html {
-    scroll-behavior: smooth;
-  }
-  #programas {
-    scroll-margin-top: 120px;
-  }
-  body {
-    @apply bg-creme text-ink font-sans antialiased text-lg md:text-[19px] leading-relaxed;
-  }
-  p {
-    @apply text-ink/80;
-  }
-}
+// Replace <div id="root"></div> with <div id="root">...</div>
+newHtml = newHtml.replace('<div id="root"></div>', '<div id="root">' + renderedHtml + '</div>');
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-  .section-eyebrow {
-    @apply text-[11px] md:text-[12px] font-bold uppercase tracking-[0.22em] text-verde-med block mb-6;
-  }
-  .section-eyebrow-light {
-    @apply text-[11px] md:text-[12px] font-bold uppercase tracking-[0.22em] text-creme/80 block mb-6;
-  }
-}
+fs.writeFileSync('index.html', newHtml);
+console.log('Final index.html generated.');
