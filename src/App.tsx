@@ -988,14 +988,14 @@ const Triagem = () => {
               num: "01",
               title: "Falta de direção",
               desc: "Tenho competência, mas me falta clareza. Sinto que estou aquém do meu potencial e não sei qual é o próximo passo certo.",
-              label: "Conhecer Marca Intencional"
+              label: "Conhecer Mentoria Individual"
             },
             {
               href: "mentoria-individual.html",
               num: "02",
               title: "Liderança travada",
               desc: "Meu time depende demais de mim. Preciso evoluir como líder e gerar resultado sem precisar estar em tudo.",
-              label: "Conhecer Mentoria"
+              label: "Conhecer Liderança Atualizada"
             },
             {
               href: "sequoia.html",
