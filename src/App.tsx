@@ -109,10 +109,9 @@ const Navbar = ({ isMobileMenuOpen, setIsMobileMenuOpen }: { isMobileMenuOpen: b
             className="flex items-center gap-3 group" 
           >
             <img 
-              src="https://i.ibb.co/v4bp7gxB/logo-db-3.png" 
+              src="/assets/debora/00_identidade/logo-db-simbolo.png" 
               alt="Logo Débora Bolangno" 
               className="w-11 h-11 object-contain group-hover:scale-110 transition-transform"
-              referrerPolicy="no-referrer"
             />
             <div className="flex flex-col">
               <span className="font-serif text-lg font-bold text-ink leading-tight">
@@ -189,7 +188,7 @@ const Navbar = ({ isMobileMenuOpen, setIsMobileMenuOpen }: { isMobileMenuOpen: b
               <div className="flex justify-between items-center mb-12">
                 <div className="flex items-center gap-3">
                   <img 
-                    src="https://i.ibb.co/v4bp7gxB/logo-db-3.png" 
+                    src="/assets/debora/00_identidade/logo-db-simbolo.png" 
                     alt="Logo" 
                     className="w-10 h-10 object-contain"
                   />
@@ -420,10 +419,9 @@ const Hero = () => {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 0.08, x: 0 }}
             transition={{ delay: 1.5, duration: 1 }}
-            src="https://i.ibb.co/v4bp7gxB/logo-db-3.png" 
+            src="/assets/debora/00_identidade/logo-db-simbolo.png" 
             alt="" 
             className="absolute top-10 right-10 w-24 md:w-32 pointer-events-none brightness-0 invert" 
-            referrerPolicy="no-referrer" 
           />
         </motion.div>
       </motion.div>
@@ -515,10 +513,10 @@ const Identification = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="font-serif text-[clamp(32px,5vw,64px)] font-black leading-[1.05] text-ink"
+            className="font-serif text-[clamp(26px,3.8vw,44px)] font-black leading-[1.2] text-ink max-w-3xl mx-auto tracking-tight"
           >
-            Se você sente que deveria estar<br />
-            em outro nível… <span className="italic text-highlight">provavelmente está certo.</span>
+            Se você sente que deveria estar em outro nível... <br className="hidden sm:inline" />
+            <span className="italic text-highlight">provavelmente está certo.</span>
           </motion.h2>
         </div>
         
@@ -530,12 +528,12 @@ const Identification = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.6 }}
-              className="flex gap-6 bg-white p-6 md:p-8 rounded-[24px] border border-dourado/25 shadow-[0_4px_20px_rgba(26,58,46,0.06)] hover:-translate-y-1 hover:shadow-[0_12px_28px_rgba(26,58,46,0.12)] hover:border-dourado/60 transition-all duration-300 group"
+              className="flex gap-5 sm:gap-6 bg-white p-6 md:p-8 rounded-[24px] border border-dourado/35 shadow-[0_6px_20px_rgba(13,32,24,0.08)] hover:-translate-y-1 hover:shadow-[0_14px_32px_rgba(13,32,24,0.14)] hover:border-dourado/70 transition-all duration-300 group"
             >
-              <div className="w-12 h-12 rounded-2xl bg-dourado/20 flex items-center justify-center shrink-0 group-hover:bg-dourado/30 transition-colors duration-300">
-                <Check size={20} className="text-verde font-bold" />
+              <div className="w-10 h-10 rounded-xl bg-verde text-[#FCFAF7] flex items-center justify-center shrink-0 shadow-sm group-hover:bg-dourado transition-colors duration-300">
+                <Check size={18} strokeWidth={3} className="text-[#FCFAF7]" />
               </div>
-              <p className="text-[16px] md:text-[18px] text-ink leading-relaxed font-semibold">{point}</p>
+              <p className="text-[15px] md:text-[17px] text-ink leading-relaxed font-semibold">{point}</p>
             </motion.div>
           ))}
         </div>
@@ -556,14 +554,13 @@ const Identification = () => {
 
 const About = () => {
   return (
-    <section id="sobre" className="bg-creme py-20 md:py-24 px-6 sm:px-8 border-y border-ink/5">
+    <section id="sobre" className="bg-creme pt-16 pb-20 md:pt-20 md:pb-24 px-6 sm:px-8 border-y border-ink/5 scroll-mt-20">
       <div className="max-w-7xl mx-auto grid grid-cols-1 min-[900px]:grid-cols-2 gap-12 md:gap-20 items-center">
         <div className="relative rounded-[24px] md:rounded-[32px] overflow-hidden shadow-2xl aspect-square md:aspect-auto min-[900px]:h-[680px]">
           <img 
-            src="https://i.ibb.co/6JVdcFbC/debora-secao-Sobre-Debora-Bolangno.webp" 
+            src="/assets/debora/01_home/sobre/debora-sobre-camisa-branca.webp" 
             alt="Débora Bolangno - Mentora de Carreira" 
             className="w-full h-full object-cover object-top"
-            referrerPolicy="no-referrer"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
         </div>
@@ -581,7 +578,7 @@ const About = () => {
             </p>
           </div>
           <div className="mt-12 flex items-center gap-4 border-t border-ink/10 pt-8">
-            <img src="https://i.ibb.co/v4bp7gxB/logo-db-3.png" alt="" className="w-12 h-12 object-contain" referrerPolicy="no-referrer" />
+            <img src="/assets/debora/00_identidade/logo-db-simbolo.png" alt="" className="w-12 h-12 object-contain" />
             <div>
               <p className="text-[9px] font-mono uppercase tracking-[0.4em] text-ink/20 mb-1">Formação & Expertise</p>
               <p className="text-sm text-ink/70 font-medium italic">Especialista em Desenvolvimento Humano e Estratégia de Carreira</p>
@@ -594,94 +591,280 @@ const About = () => {
 };
 
 const TestimonialsLuxury = () => {
-  const testimonials = [
+  interface Testimonial {
+    id: string;
+    name: string;
+    company: string;
+    context: string;
+    tag: string;
+    highlight: string;
+    fullText: string;
+  }
+
+  const [selectedTestimonial, setSelectedTestimonial] = useState<Testimonial | null>(null);
+
+  const featuredTestimonials: Testimonial[] = [
     {
-      text: "Cada encontro foi transformador — inspiração, provocação e prática real. Já estou aplicando no meu dia a dia como líder.",
-      name: "Lívia Alves",
-      role: "Gerente de Agência Bradesco",
-      image: "https://i.ibb.co/cSFbNmc2/LIVIA-ALVES-GERENTE-DE-AGENCIA-BRADESCO.jpg"
+      id: "lais",
+      name: "Lais Cesar",
+      company: "Banco Bradesco",
+      context: "Mentoria Liderança Atualizada e Mentoria Individual",
+      tag: "LIDERANÇA ATUALIZADA & MENTORIA INDIVIDUAL",
+      highlight: "Sua mentoria não tenta me transformar em alguém que eu não sou, mas tem ajudado a potencializar o que tenho de melhor.",
+      fullText: "Débora, quero parabenizá-la pelo trabalho cheio de propósito que você vem realizando, especialmente no meu processo de mentoria.\n\nVocê conduz tudo com muita leveza, sensibilidade e intencionalidade. O mais bonito é que sua mentoria não tenta me transformar em alguém que eu não sou, mas tem ajudado a potencializar o que tenho de melhor e a ajustar aquilo que já não faz mais sentido para a minha vida e para a minha caminhada.\n\nSou muito grata por cada encontro, por cada reflexão e por toda a generosidade em compartilhar seu conhecimento e sua experiência.\n\nObrigada por acreditar nas pessoas e por fazer a diferença na minha jornada. Que Deus continue abençoando sua missão e alcance muitas outras vidas através do seu propósito."
     },
     {
-      text: "Semanas muito valiosas. Saio com determinação para implementar tudo.",
-      name: "Anderson Alves dos Santos",
-      role: "Gerente de Agência Bradesco | CFP®",
-      image: "https://i.ibb.co/PzNrVgvj/Anderson-Alves-dos-Santos-CFPM-GERENTE-DE-AGENCIA-BRADESCO.jpg"
-    },
-    {
-      text: "Levarei esses aprendizados comigo em cada desafio profissional.",
-      name: "Fredie Abrantes",
-      role: "Gerente de Agência Bradesco",
-      image: "https://i.ibb.co/d0t8pY9V/fredieabrantes-gerente-de-agencia-bradesco.jpg"
-    },
-    {
-      text: "Uma experiência que trouxe evolução real para executar no dia a dia.",
-      name: "Sara Martins",
-      role: "CEA",
-      image: "https://i.ibb.co/bx6PJ2t/sara.png"
+      id: "franco",
+      name: "Franco Décio",
+      company: "Grupo Allure",
+      context: "Sócio do Grupo Allure — contratou Consultoria de RH para a empresa",
+      tag: "Consultoria de RH & Mapeamento",
+      highlight: "A Débora tem a capacidade de fazer parecer fácil o que é muito complexo quando se trata de Gestão Estratégica de Pessoas.",
+      fullText: "Profissional exemplar e iluminada!\n\nSim, a Débora tem a capacidade de fazer parecer fácil o que é muito complexo quando se trata de Gestão Estratégica de Pessoas.\n\nTive o privilégio de fazer Mapeamento de Competências e receber valiosas orientações enquanto Gerente Geral no Bradesco e, agora, enquanto sócio do Grupo Allure, a Débora atuou com maestria em um desafio ainda maior: diagnosticar atitudes essenciais para o grupo, criar autoavaliações qualitativas, apoiar na implantação de uma Comissão de Pessoas, orientar e preparar líderes para proverem feedbacks efetivos, fazer avaliação 360° dos sócios majoritários, estruturar Planos de Desenvolvimento Individuais e Coletivos e nos propiciar gerir a evolução com diferentes ferramentas, inclusive Matriz 9-box.\n\nFaz a diferença e transborda na vida das pessoas e empresas."
     }
   ];
 
+  const standardTestimonials: Testimonial[] = [
+    {
+      id: "patricia",
+      name: "Patricia Farias",
+      company: "Banco Bradesco",
+      context: "Participou da Mentoria Marca Intencional",
+      tag: "Mentoria Marca Intencional",
+      highlight: "A mentoria Marca Intencional agregou muito ao meu repertório e ao meu posicionamento profissional, com reflexões que já estou aplicando no meu dia a dia.",
+      fullText: "A mentoria Marca Intencional agregou muito ao meu repertório e ao meu posicionamento profissional.\n\nEla me ajudou a compreender a importância de estarmos bem posicionados, de forma estratégica e autêntica, e que o nível que alcançamos na carreira exige uma evolução constante para continuarmos crescendo e conquistando novos espaços. Foi um aprendizado importante sobre a necessidade de investir no nosso próprio CPF, fortalecendo competências, imagem profissional e marca pessoal.\n\nAlém do conteúdo, a mentoria trouxe reflexões valiosas que já estou aplicando no meu dia a dia e neste novo momento da minha trajetória profissional.\n\nSe eu pudesse apontar um ponto de melhoria, seria apenas a duração. A sensação que ficou é que poderia ter durado mais tempo, pois os encontros foram muito ricos e deixaram aquele gostinho de querer continuar aprendendo e aprofundando ainda mais os temas abordados.\n\nMuito obrigada pela dedicação, generosidade e pela forma inspiradora com que você conduz esse processo."
+    },
+    {
+      id: "laura",
+      name: "Laura Sanches",
+      company: "Banco Bradesco",
+      context: "Participou da Mentoria Individual",
+      tag: "Mentoria Individual",
+      highlight: "Uma profissional realmente diferenciada, que transforma vidas e carreiras com sua habilidade única de guiar, apoiar e inspirar.",
+      fullText: "É uma honra recomendar essa profissional excepcional, que tem em seu DNA a nobre missão de desenvolver pessoas. Atuando como mentora e coach, ela transforma vidas e carreiras com sua habilidade única de guiar, apoiar e inspirar. Seu poder de comunicação é diferenciado, permitindo que suas mensagens cheguem de forma clara e impactante. Além disso, seu espírito empreendedor a faz buscar constantemente novas maneiras de inovar e agregar valor. Destaca-se ainda pelo excelente relacionamento interpessoal, sempre cultivando conexões genuínas e criando um ambiente de confiança e colaboração. Uma profissional realmente diferenciada, que é inspiração e referência para todos ao seu redor."
+    },
+    {
+      id: "joao",
+      name: "João Dória",
+      company: "Banco Bradesco",
+      context: "Participou da Mentoria Individual",
+      tag: "Mentoria Individual",
+      highlight: "A Débora desempenhou um papel crucial em minha carreira, provocando uma mudança significativa de mindset e decisões mais assertivas.",
+      fullText: "Como Gerente Geral de uma instituição financeira de grande relevância no âmbito nacional, posso afirmar que a Débora desempenhou um papel crucial em minha carreira. Através do processo de coaching conduzido por ela, embarquei em uma jornada excepcional. Sua análise perspicaz do meu potencial estimulou e provocou uma mudança significativa de mindset. Você já aproveitou o poder da sua bússola interna? Esse conhecimento adquirido facilita a definição de caminhos e trajetórias mais assertivas, culminando em decisões robustas e sólidas.\nSe permita entrar nessa jornada, recomendo."
+    },
+    {
+      id: "mario",
+      name: "Mário Marques",
+      company: "Grupo AG Capital",
+      context: "Contratou Consultoria de RH para a empresa",
+      tag: "Consultoria de RH",
+      highlight: "Ela tem a percepção perfeita das necessidades corporativas e faz essa conciliação com maestria, estimulando equipes de alta performance.",
+      fullText: "Super, mega, hiper recomendo Débora!\n\nEla tem como propósito de vida desenvolver e potencializar habilidades individuais e coletivas.\n\nAlém do olhar extremamente atento e cuidado com as pessoas, tem a percepção perfeita das necessidades corporativas e faz essa conciliação com maestria, estimulando equipes de alta performance."
+    }
+  ];
+
+  useEffect(() => {
+    if (selectedTestimonial) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [selectedTestimonial]);
+
   return (
-    <section id="depoimentos" className="bg-verde text-creme py-24 md:py-40 px-6 overflow-hidden">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-16 md:mb-24">
+    <section id="depoimentos" className="bg-verde text-creme py-16 md:py-24 px-6 overflow-hidden border-y border-ink/5">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-10 max-w-4xl mx-auto">
           <motion.span 
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="section-eyebrow-light text-center"
+            className="section-eyebrow-light text-center mb-4 block"
           >
-            Impacto Real
+            Reconhecimento & Impacto
           </motion.span>
-          <h2 className="font-serif text-[clamp(32px,4vw,56px)] font-black text-center text-creme leading-tight">
-            Depoimentos que <br className="hidden md:block" /> validam a jornada.
+          <h2 className="font-serif text-[clamp(28px,3.2vw,42px)] font-black text-center text-creme leading-tight tracking-tight mb-4">
+            Quem já viveu o processo com a Débora
           </h2>
+          <p className="text-creme/85 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
+            Depoimentos de profissionais e empresas que passaram por mentorias, processos de desenvolvimento e consultorias conduzidas por Débora Bolangno.
+          </p>
         </div>
 
-        {/* DESTAQUE RENATA */}
-        <div className="mb-20 flex flex-col md:flex-row items-center gap-10 bg-white/[0.03] p-10 md:p-14 rounded-[40px] border border-white/10 shadow-2xl">
-          <div className="text-center md:text-left w-full">
-            <p className="font-cormorant text-[24px] md:text-[32px] leading-[1.5] italic text-creme/90 font-medium">
-              “Uma jornada rica e transformadora. Saio com novos olhares, insights valiosos e a certeza de evolução real como líder.”
-            </p>
-            <span className="block mt-8 text-[12px] md:text-[14px] tracking-[0.2em] font-black text-highlight uppercase">
-              — Renata Nazareth de Jesus, CEA
-            </span>
-          </div>
-        </div>
-
-        {/* LISTA LIMPA */}
-        <div className="flex flex-col gap-12 md:gap-16 mb-24">
-          {testimonials.map((t, i) => (
-            <div key={i} className="flex gap-8 md:gap-10 items-start border-l-2 border-white/10 pl-8 md:pl-12 transition-all hover:border-highlight/50 group">
-              <div className="flex flex-col">
-                <p className="font-cormorant text-[20px] md:text-[24px] leading-relaxed text-creme/80 italic group-hover:text-creme transition-colors">
-                  “{t.text}”
-                </p>
-                <div className="mt-6 flex flex-col">
-                  <span className="text-[11px] font-bold text-creme uppercase tracking-[0.2em]">{t.name}</span>
-                  <span className="text-[10px] font-mono text-creme/30 uppercase tracking-[0.2em] mt-1">{t.role}</span>
-                </div>
+        {/* Featured row: Lais and Franco */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+          {featuredTestimonials.map((t) => (
+            <motion.div
+              key={t.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="bg-[#FCFAF7] border border-dourado/20 rounded-[32px] p-6 md:p-8 flex flex-col justify-between shadow-[0_12px_40px_rgba(26,58,46,0.12)] hover:-translate-y-1 transition-all duration-300 relative overflow-hidden group"
+            >
+              {/* Decorative premium quotes background */}
+              <div className="absolute top-6 right-8 text-[#EAE5DA] opacity-30 select-none pointer-events-none font-serif text-[120px] leading-none">
+                “
               </div>
-            </div>
+
+              <div className="relative z-10">
+                <div className="flex mb-3">
+                  <span className="text-[11px] font-bold tracking-[0.1em] uppercase px-3 py-1.5 bg-verde/10 text-verde border border-verde/10 rounded-full">
+                    {t.tag}
+                  </span>
+                </div>
+
+                <p className="font-serif text-base md:text-lg font-medium text-verde leading-relaxed mb-3 group-hover:text-verde-med transition-colors">
+                  “{t.highlight}”
+                </p>
+              </div>
+
+              <div className="relative z-10 border-t border-verde/10 pt-3.5 mt-2.5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                <div className="text-left flex-1 min-w-0">
+                  <h4 className="text-verde font-serif text-base font-bold leading-tight">
+                    {t.name}
+                  </h4>
+                  <p className="text-ink/65 text-[10px] font-mono tracking-wider uppercase mt-0.5">
+                    {t.company}
+                  </p>
+                  <p className="text-ink/50 text-[11px] mt-0.5 leading-tight font-medium">
+                    {t.context}
+                  </p>
+                </div>
+
+                <button
+                  onClick={() => setSelectedTestimonial(t)}
+                  className="flex items-center justify-center gap-1.5 px-4 py-3 sm:py-2 rounded-full border border-verde/20 text-verde hover:border-verde hover:bg-verde/5 font-bold text-[10px] sm:text-[11px] uppercase tracking-wider transition-all duration-300 shrink-0 w-full sm:w-auto group/btn shadow-sm"
+                >
+                  <span>Ler depoimento completo</span>
+                  <span className="inline-block transition-transform duration-300 group-hover/btn:translate-x-1">→</span>
+                </button>
+              </div>
+            </motion.div>
           ))}
         </div>
 
-        {/* INSTITUCIONAL GLAUCIMAR */}
-        <div className="border-t border-white/10 pt-20 flex flex-col items-center gap-10 text-center">
-          <p className="font-cormorant text-[20px] md:text-[26px] text-creme/60 italic leading-relaxed max-w-2xl px-4">
-            “Carreiras são construídas pela consistência, pelo tempo e pelas trocas. É na colaboração que fortalecemos nossa trajetória e ampliamos nosso impacto.”
-          </p>
-          <div className="flex flex-col items-center">
-            <span className="block text-[11px] font-black text-verde-med uppercase tracking-[0.3em] mb-2">
-              Glaucimar Peticov
-            </span>
-            <span className="text-[9px] md:text-[10px] text-creme/30 uppercase tracking-[0.1em] max-w-lg leading-relaxed font-bold">
-              Conselheira e referência em liderança · Ex-Diretora Executiva Bradesco · CEO Peti Desenvolvimento Humano
-            </span>
-          </div>
+        {/* Standard row: 4 columns in 2x2 grid on desktop */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {standardTestimonials.map((t) => (
+            <motion.div
+              key={t.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="bg-[#FCFAF7] border border-dourado/15 rounded-[24px] p-5 md:p-6 flex flex-col justify-between shadow-[0_8px_30px_rgba(26,58,46,0.08)] hover:-translate-y-1 transition-all duration-300 relative overflow-hidden group"
+            >
+              {/* Decorative premium quotes background */}
+              <div className="absolute top-4 right-6 text-[#EAE5DA] opacity-35 select-none pointer-events-none font-serif text-[90px] leading-none">
+                “
+              </div>
+
+              <div className="relative z-10">
+                <div className="flex mb-2.5">
+                  <span className="text-[10px] font-bold tracking-[0.1em] uppercase px-2.5 py-1 bg-verde/10 text-verde border border-verde/10 rounded-full">
+                    {t.tag}
+                  </span>
+                </div>
+
+                <p className="font-serif text-sm md:text-base font-medium text-verde leading-relaxed mb-2.5 group-hover:text-verde-med transition-colors">
+                  “{t.highlight}”
+                </p>
+              </div>
+
+              <div className="relative z-10 border-t border-verde/10 pt-3.5 mt-2.5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                <div className="text-left flex-1 min-w-0">
+                  <h4 className="text-verde font-serif text-sm font-bold leading-tight">
+                    {t.name}
+                  </h4>
+                  <p className="text-ink/65 text-[10px] font-mono tracking-wider uppercase mt-0.5">
+                    {t.company}
+                  </p>
+                  <p className="text-ink/50 text-[10px] mt-0.5 leading-tight font-medium">
+                    {t.context}
+                  </p>
+                </div>
+
+                <button
+                  onClick={() => setSelectedTestimonial(t)}
+                  className="flex items-center justify-center gap-1.5 px-4 py-3 sm:py-2 rounded-full border border-verde/20 text-verde hover:border-verde hover:bg-verde/5 font-bold text-[10px] sm:text-[11px] uppercase tracking-wider transition-all duration-300 shrink-0 w-full sm:w-auto group/btn shadow-sm"
+                >
+                  <span>Ler depoimento completo</span>
+                  <span className="inline-block transition-transform duration-300 group-hover/btn:translate-x-1">→</span>
+                </button>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
+
+      {/* MODAL */}
+      <AnimatePresence>
+        {selectedTestimonial && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedTestimonial(null)}
+            className="fixed inset-0 z-[99999] bg-black/70 backdrop-blur-md flex items-center justify-center p-4"
+          >
+            <motion.div
+              initial={{ scale: 0.95, y: 20, opacity: 0 }}
+              animate={{ scale: 1, y: 0, opacity: 1 }}
+              exit={{ scale: 0.95, y: 20, opacity: 0 }}
+              transition={{ type: "spring", duration: 0.5 }}
+              onClick={(e) => e.stopPropagation()}
+              className="bg-[#FCFAF7] rounded-[32px] border border-dourado/30 max-w-2xl w-full max-h-[90vh] md:max-h-[86vh] overflow-y-auto p-5 md:p-7 shadow-2xl relative scrollbar-thin scrollbar-thumb-dourado/20 scrollbar-track-transparent"
+            >
+              {/* Close Button */}
+              <button
+                onClick={() => setSelectedTestimonial(null)}
+                className="absolute top-4 right-4 p-2 rounded-full bg-verde/5 hover:bg-verde/10 text-verde transition-colors"
+                aria-label="Fechar"
+              >
+                <X size={18} />
+              </button>
+
+              <div className="flex mb-2">
+                <span className="text-[11px] font-bold tracking-[0.1em] uppercase px-3 py-1 bg-verde/10 text-verde border border-verde/10 rounded-full">
+                  {selectedTestimonial.tag}
+                </span>
+              </div>
+
+              {/* Decorative quotes icon */}
+              <span className="font-serif text-dourado text-[48px] leading-none block -mt-1.5 -ml-1 select-none">“</span>
+
+              <div className="font-serif text-[14px] md:text-[15px] text-ink leading-relaxed mb-4 -mt-4 font-normal space-y-3.5">
+                {selectedTestimonial.fullText.split("\n\n").map((para, idx) => (
+                  <p key={idx}>{para}</p>
+                ))}
+              </div>
+
+              <div className="border-t border-verde/10 pt-3.5 mt-2 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div className="text-left">
+                  <h4 className="text-verde font-serif text-base font-bold leading-tight">
+                    {selectedTestimonial.name}
+                  </h4>
+                  <p className="text-ink/65 text-xs font-mono tracking-wider uppercase mt-0.5">
+                    {selectedTestimonial.company}
+                  </p>
+                  <p className="text-ink/50 text-[11px] mt-0.5 leading-tight font-medium">
+                    {selectedTestimonial.context}
+                  </p>
+                </div>
+
+                <button
+                  onClick={() => setSelectedTestimonial(null)}
+                  className="px-4 py-1.5 bg-verde text-creme font-bold text-xs uppercase tracking-widest rounded-full hover:bg-dourado transition-colors shadow-md shrink-0"
+                >
+                  Fechar
+                </button>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };
@@ -698,7 +881,7 @@ const Qualification = () => {
           Mentoria focada em posições de liderança, gestão e transições estratégicas.
         </p>
       </div>
-      <img src="https://i.ibb.co/v4bp7gxB/logo-db-3.png" alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] md:w-[40%] opacity-[0.03] pointer-events-none" referrerPolicy="no-referrer" />
+      <img src="/assets/debora/00_identidade/logo-db-simbolo.png" alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] md:w-[40%] opacity-[0.03] pointer-events-none" />
     </section>
   );
 };
@@ -723,23 +906,27 @@ const PresenceGallery = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {[
             {
-              src: "https://i.ibb.co/B58qn0fV/debora-atuacao-e-lideranca-01.webp",
+              src: "/assets/debora/01_home/galeria/debora-galeria-03-sentada-color.webp",
               label: "Atuação & Liderança",
+              alt: "Débora Bolangno sentada em contexto profissional de liderança",
               delay: 0
             },
             {
-              src: "https://i.ibb.co/N6gJyhg0/Debora-Branding-Posicionamento.webp",
+              src: "/assets/debora/01_home/galeria/debora-galeria-01-presenca-espelho.webp",
               label: "Branding & Posicionamento",
+              alt: "Débora Bolangno refletida no espelho com postura profissional",
               delay: 0.2
             },
             {
-              src: "https://i.ibb.co/TqMtJCk3/Debora-Mentoria-Conex-o.webp",
+              src: "/assets/debora/01_home/galeria/debora-galeria-04-pose-cadeira.webp",
               label: "Mentoria & Conexão",
+              alt: "Débora Bolangno sorridente em pose de retrato próximo",
               delay: 0.4
             },
             {
-              src: "https://i.ibb.co/BHR15hzF/debora-Presen-a-Executiva.webp",
+              src: "/assets/debora/01_home/galeria/debora-galeria-02-sentada-pb.webp",
               label: "Presença Executiva",
+              alt: "Débora Bolangno em retrato editorial preto e branco expressando autoridade",
               delay: 0.6
             }
           ].map((item, i) => (
@@ -749,13 +936,12 @@ const PresenceGallery = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: item.delay }}
-              className="relative rounded-[56px] overflow-hidden aspect-[4/3] shadow-2xl group cursor-none"
+              className="relative rounded-[56px] overflow-hidden aspect-[4/3] shadow-2xl group cursor-default"
             >
                <img 
                 src={item.src} 
-                alt={`Débora Bolangno - ${item.label}`} 
+                alt={item.alt} 
                 className="w-full h-full object-cover object-[50%_20%] brightness-[1.08] contrast-[1.02] transition-transform duration-[2.5s] group-hover:scale-110"
-                referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60"></div>
               <div className="absolute bottom-10 left-10 text-white translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
@@ -1284,7 +1470,7 @@ const ProgramsGrid = () => {
   ];
 
   return (
-    <section id="programas" className="bg-[#FCFAF7] py-20 md:py-24 px-6 sm:px-8">
+    <section id="programas" className="bg-[#FCFAF7] pt-16 pb-20 md:pt-20 md:pb-24 px-6 sm:px-8 scroll-mt-20">
       <div className="max-w-7xl mx-auto">
         <div className="mb-12 md:mb-20 text-center md:text-left">
           <motion.span 
@@ -1400,9 +1586,9 @@ const Lectures = () => {
   ];
 
   return (
-    <section id="palestras" className="bg-creme py-24 md:py-32 px-6 sm:px-8 border-t border-ink/5">
+    <section id="palestras" className="bg-creme pt-14 pb-24 md:pt-16 md:pb-32 px-6 sm:px-8 border-t border-ink/5 scroll-mt-20">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col min-[900px]:flex-row justify-between items-start min-[900px]:items-end gap-10 mb-16 md:mb-24">
+        <div className="flex flex-col min-[900px]:flex-row justify-between items-start min-[900px]:items-end gap-10 mb-10 md:mb-14">
           <div className="max-w-[700px]">
             <motion.span 
               initial={{ opacity: 0, scale: 0.95 }}
@@ -1486,10 +1672,9 @@ const Repertoire = () => {
         <div className="order-1 md:order-2 relative group">
           <div className="absolute -inset-2 md:-inset-4 bg-verde/5 rounded-[24px] md:rounded-[48px] scale-105 group-hover:scale-110 transition-transform duration-700"></div>
           <img 
-            src="https://i.ibb.co/20Ddwc9Y/LIVROS-DB.jpg" 
-            alt="Repertório Débora Bolangno" 
+            src="/assets/debora/02_programas/lideranca-atualizada/debora-lideranca-livros.webp" 
+            alt="Repertório Débora Bolangno - Livros de liderança e gestão" 
             className="relative rounded-[24px] md:rounded-[40px] shadow-2xl brightness-95 group-hover:brightness-100 transition-all duration-700 w-full" 
-            referrerPolicy="no-referrer"
           />
         </div>
       </div>
@@ -1678,15 +1863,14 @@ const ContactModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
 
 const CTA = () => {
   return (
-    <section id="contato" className="bg-white py-24 md:py-40 px-6 sm:px-8 border-y border-ink/4 overflow-hidden">
+    <section id="contato" className="bg-white pt-14 pb-24 md:pt-16 md:pb-32 px-6 sm:px-8 border-y border-ink/4 overflow-hidden scroll-mt-20">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24 items-center">
-          <div className="relative rounded-[40px] md:rounded-[64px] overflow-hidden aspect-[4/5] shadow-2xl order-last md:order-first">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div className="relative rounded-[32px] md:rounded-[48px] overflow-hidden aspect-square md:aspect-[4/5] max-w-md mx-auto w-full shadow-xl order-last md:order-first">
             <img 
-              src="https://i.ibb.co/FLG1NkW7/debora-Pronto-para-o-seu-pr-ximo-n-vel-na-carreira.webp" 
-              alt="Débora Bolangno" 
-              className="w-full h-full object-cover object-[center_20%] transition-transform duration-[3s] hover:scale-105"
-              referrerPolicy="no-referrer"
+              src="/assets/debora/01_home/sobre/debora-sobre-camisa-branca.webp" 
+              alt="Débora Bolangno - Posicionamento e Estratégia de Carreira" 
+              className="w-full h-full object-cover object-[center_15%] transition-transform duration-[3s] hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
           </div>
@@ -1699,18 +1883,18 @@ const CTA = () => {
             >
               Próximo Passo
             </motion.span>
-            <h2 className="font-serif text-[clamp(32px,5vw,64px)] font-black text-ink leading-[1.05] mb-8 lg:mb-12">
+            <h2 className="font-serif text-[clamp(28px,4vw,48px)] font-bold text-ink leading-[1.1] mb-5 md:mb-6">
               Pronto para o seu <span className="italic text-highlight">próximo nível</span> na carreira?
             </h2>
-            <p className="text-lg md:text-2xl text-ink/65 max-w-[560px] mx-auto md:mx-0 mb-12 lg:mb-16 leading-relaxed">
+            <p className="text-base md:text-lg text-ink/65 max-w-[500px] mx-auto md:mx-0 mb-8 md:mb-10 leading-relaxed">
               Agende agora um diagnóstico estratégico e entenda como podemos acelerar seu crescimento e resultados.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-5">
-              <a href="https://wa.me/5511940803333?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20diagn%C3%B3stico%20estrat%C3%A9gico" target="_blank" rel="noopener" className="w-full sm:w-auto bg-verde text-white px-10 md:px-12 py-5 rounded-full text-[11px] md:text-[12px] uppercase tracking-[0.25em] font-bold hover:bg-[#112e28] hover:-translate-y-px shadow-xl shadow-verde/20 transition-all flex items-center justify-center gap-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
+              <a href="https://wa.me/5511940803333?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20diagn%C3%B3stico%20estrat%C3%A9gico" target="_blank" rel="noopener" className="w-full sm:w-auto bg-verde text-white px-8 md:px-10 py-4.5 rounded-full text-[11px] md:text-[12px] uppercase tracking-[0.25em] font-bold hover:bg-[#112e28] hover:-translate-y-px shadow-xl shadow-verde/20 transition-all flex items-center justify-center gap-3">
                 Agendar diagnóstico agora
-                <ArrowRight size={20} />
+                <ArrowRight size={18} />
               </a>
-              <a href="https://www.linkedin.com/in/deborabolangno" target="_blank" rel="noopener" className="w-full sm:w-auto border-2 border-ink/10 text-ink px-10 md:px-12 py-5 rounded-full text-[11px] md:text-[12px] uppercase tracking-[0.25em] font-bold hover:bg-[#FAF6F0] hover:border-verde hover:text-verde hover:-translate-y-px hover:shadow-md transition-all duration-300 text-center">
+              <a href="https://www.linkedin.com/in/deborabolangno" target="_blank" rel="noopener" className="w-full sm:w-auto border-2 border-ink/10 text-ink px-8 md:px-10 py-4.5 rounded-full text-[11px] md:text-[12px] uppercase tracking-[0.25em] font-bold hover:bg-[#FAF6F0] hover:border-verde hover:text-verde hover:-translate-y-px hover:shadow-md transition-all duration-300 text-center">
                 Ver LinkedIn
               </a>
             </div>
@@ -1728,7 +1912,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-10 pb-8 border-b border-white/10">
           <div className="flex flex-col items-center md:items-start gap-4">
             <div className="flex items-center gap-4">
-              <img src="https://i.ibb.co/v4bp7gxB/logo-db-3.png" alt="Logo" className="w-10 h-10 object-contain brightness-0 invert" />
+              <img src="/assets/debora/00_identidade/logo-db-simbolo.png" alt="Logo Débora Bolangno" className="w-10 h-10 object-contain brightness-0 invert" />
               <div className="flex flex-col">
                 <span className="font-serif text-xl font-bold leading-none mb-1">Débora Bolangno</span>
                 <span className="text-[9px] uppercase tracking-widest text-creme/40">Estratégia de Carreira & Liderança</span>

@@ -52,7 +52,7 @@
     <meta property="og:url" content="https://deborabolangno.com.br/palestras.html" />
     <meta property="og:title" content="Palestras e Workshops de Liderança | Débora Bolangno" />
     <meta property="og:description" content="Palestras corporativas e workshops sob medida sobre liderança estratégica, comunicação assertiva, segurança psicológica e presença executiva." />
-    <meta property="og:image" content="https://i.ibb.co/1JncYjFL/Debora-Ensaio-Novo-3.jpg" />
+    <meta property="og:image" content="/assets/debora/03_palestras_consultoria/palestras/debora-palestra-auditorio.webp" />
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -340,7 +340,7 @@
 
         /* Design based on Home Page Title Aesthetics */
         .page-intro {
-            padding: 120px 0 80px;
+            padding: 100px 0 32px;
         }
 
         .page-intro-inner {
@@ -356,7 +356,7 @@
             letter-spacing: 3px;
             font-weight: 800;
             color: var(--brand-gold);
-            margin-bottom: 24px;
+            margin-bottom: 16px;
             display: block;
         }
 
@@ -364,7 +364,7 @@
             font-size: clamp(48px, 6vw, 84px);
             font-weight: 900;
             line-height: 1.1;
-            margin-bottom: 32px;
+            margin-bottom: 16px;
             color: var(--brand-green);
         }
 
@@ -372,6 +372,18 @@
             font-style: italic;
             font-weight: 400;
             opacity: 0.7;
+        }
+
+        .title-divider {
+            width: 100px;
+            height: 1px;
+            background: var(--brand-gold);
+            margin: 0 auto 24px;
+        }
+        @media (min-width: 768px) {
+            .title-divider {
+                margin: 0 0 24px 0;
+            }
         }
 
         .intro-img-wrapper {
@@ -394,7 +406,7 @@
             color: rgba(26, 58, 46, 0.6);
             max-width: 500px;
             line-height: 1.8;
-            margin-top: 40px;
+            margin-top: 20px;
         }
 
         /* Numbered Topics Grid Style (Image Reference) */
@@ -520,7 +532,7 @@
         }
 
         @media (max-width: 1024px) {
-            .page-intro { padding: 110px 0 60px; }
+            .page-intro { padding: 90px 0 40px; }
             .page-intro-inner { 
                 grid-template-columns: 1fr; 
                 gap: 48px; 
@@ -530,8 +542,8 @@
                 height: 400px; 
                 border-radius: 24px;
             }
-            .intro-subtitle { margin: 32px auto 0; }
-            .title-divider { margin: 0 auto 40px !important; }
+            .intro-subtitle { margin: 20px auto 0; }
+            .title-divider { margin: 0 auto 24px !important; }
             
             .topics-grid { grid-template-columns: repeat(2, 1fr); }
         }
@@ -542,7 +554,7 @@
             .topic-card { padding: 40px; }
             .title-display { font-size: 40px; }
             .intro-img { height: 320px; }
-            .page-intro { padding: 96px 0 40px; }
+            .page-intro { padding: 80px 0 32px; }
         }
 
         #header {
@@ -597,7 +609,7 @@
                 </a>
                 <div class="hidden lg:block w-px h-6 bg-ink/10"></div>
                 <a href="index.html" class="flex items-center gap-3 group">
-                    <img src="https://i.ibb.co/v4bp7gxB/logo-db-3.png" alt="Logo Débora Bolangno" class="w-9 h-9 md:w-11 md:h-11 object-contain group-hover:scale-110 transition-transform">
+                    <img src="/assets/debora/00_identidade/logo-db-simbolo.png" alt="Logo Débora Bolangno" class="w-9 h-9 md:w-11 md:h-11 object-contain group-hover:scale-110 transition-transform">
                     <div class="hidden sm:flex flex-col">
                         <span class="font-serif text-base md:text-lg font-bold text-ink leading-tight">Débora Bolangno</span>
                         <span class="text-[8px] md:text-[9px] uppercase tracking-[0.2em] text-ink/40 font-medium whitespace-nowrap">Estratégia de Carreira & Liderança</span>
@@ -629,7 +641,7 @@
         <div id="menu-content" class="absolute top-0 right-0 bottom-0 w-[85%] max-w-[360px] bg-white flex flex-col p-8 shadow-2xl translate-x-full transition-transform duration-300">
             <div class="flex justify-between items-center mb-12">
                 <div class="flex items-center gap-3">
-                    <img src="https://i.ibb.co/v4bp7gxB/logo-db-3.png" alt="Logo" class="w-10 h-10 object-contain">
+                    <img src="/assets/debora/00_identidade/logo-db-simbolo.png" alt="Logo" class="w-10 h-10 object-contain">
                     <div class="flex flex-col">
                         <span class="font-serif text-base font-bold text-ink">Débora Bolangno</span>
                         <span class="text-[9px] uppercase tracking-[0.2em] text-ink/40 font-medium">Estratégia de Carreira</span>
@@ -733,7 +745,7 @@
     </script>
 </header>
 
-    <section class="page-intro pb-16 md:pb-24">
+    <section class="page-intro pb-8 md:pb-12">
         <div class="container">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 items-center">
                 <div class="text-center md:text-left order-last md:order-first">
@@ -741,16 +753,16 @@
                     <h1 class="title-display">
                         Palestras <i>& workshops</i> Corporativos
                     </h1>
-                    <div class="title-divider" style="width: 100px; height: 1px; background: var(--brand-gold); margin: 0 auto 40px; md:margin-left: 0;"></div>
+                    <div class="title-divider"></div>
                     <p class="intro-subtitle text-lg md:text-xl leading-relaxed text-ink/60 max-w-xl mx-auto md:mx-0">
                         Transforme a cultura da sua empresa por meio de conteúdos estratégicos, fundamentados em mais de 20 anos de experiência executiva.
                     </p>
-                    <div class="mt-12">
+                    <div class="mt-6 md:mt-8">
                         <a href="https://wa.me/5511940803333?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20as%20suas%20palestras" class="bg-verde text-white px-10 py-5 rounded-full text-[12px] uppercase tracking-[0.2em] font-bold hover:bg-[#112e28] hover:-translate-y-px transition-all inline-block w-full sm:w-auto text-center shadow-lg">Agendar Agora</a>
                     </div>
                 </div>
                 <div class="intro-img-wrapper">
-                    <img src="https://i.ibb.co/BHR15hzF/debora-Presen-a-Executiva.webp" alt="Débora Palestrando" class="intro-img h-80 md:h-[600px] rounded-[40px]" style="object-position: center 20%;">
+                    <img src="/assets/debora/03_palestras_consultoria/palestras/debora-palestra-auditorio.webp" alt="Débora Bolangno em palestra para auditório com público corporativo" class="intro-img h-80 md:h-[600px] rounded-[40px]" style="object-position: center 20%;">
                 </div>
             </div>
         </div>
@@ -860,7 +872,7 @@
             <div class="flex flex-col md:flex-row justify-between items-center gap-10 pb-8 border-b border-white/10">
                 <div class="flex flex-col items-center md:items-start gap-4">
                     <div class="flex items-center gap-4">
-                        <img src="https://i.ibb.co/v4bp7gxB/logo-db-3.png" alt="Logo" class="w-10 h-10 object-contain brightness-0 invert">
+                        <img src="/assets/debora/00_identidade/logo-db-simbolo.png" alt="Logo" class="w-10 h-10 object-contain brightness-0 invert">
                         <div class="flex flex-col">
                             <span class="font-serif text-xl font-bold leading-none mb-1">Débora Bolangno</span>
                             <span class="text-[9px] uppercase tracking-widest text-creme/40">Estratégia de Carreira & Liderança</span>
