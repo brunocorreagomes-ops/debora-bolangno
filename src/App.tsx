@@ -984,14 +984,14 @@ const Triagem = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           {[
             {
-              href: "marca-intencional.html",
+              href: "mentoria-individual.html",
               num: "01",
               title: "Falta de direção",
               desc: "Tenho competência, mas me falta clareza. Sinto que estou aquém do meu potencial e não sei qual é o próximo passo certo.",
               label: "Conhecer Mentoria Individual"
             },
             {
-              href: "mentoria-individual.html",
+              href: "lideranca-atualizada.html",
               num: "02",
               title: "Liderança travada",
               desc: "Meu time depende demais de mim. Preciso evoluir como líder e gerar resultado sem precisar estar em tudo.",
