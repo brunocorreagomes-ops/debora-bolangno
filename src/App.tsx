@@ -112,6 +112,7 @@ const Navbar = ({ isMobileMenuOpen, setIsMobileMenuOpen }: { isMobileMenuOpen: b
               src="/assets/debora/00_identidade/logo-db-simbolo.png" 
               alt="Logo Débora Bolangno" 
               className="w-11 h-11 object-contain group-hover:scale-110 transition-transform"
+              referrerPolicy="no-referrer"
             />
             <div className="flex flex-col">
               <span className="font-serif text-lg font-bold text-ink leading-tight">
@@ -191,6 +192,7 @@ const Navbar = ({ isMobileMenuOpen, setIsMobileMenuOpen }: { isMobileMenuOpen: b
                     src="/assets/debora/00_identidade/logo-db-simbolo.png" 
                     alt="Logo" 
                     className="w-10 h-10 object-contain"
+                    referrerPolicy="no-referrer"
                   />
                   <div className="flex flex-col">
                     <span className="font-serif text-base font-bold text-ink">
@@ -422,6 +424,7 @@ const Hero = () => {
             src="/assets/debora/00_identidade/logo-db-simbolo.png" 
             alt="" 
             className="absolute top-10 right-10 w-24 md:w-32 pointer-events-none brightness-0 invert" 
+            referrerPolicy="no-referrer"
           />
         </motion.div>
       </motion.div>
@@ -561,6 +564,7 @@ const About = () => {
             src="/assets/debora/01_home/sobre/debora-sobre-camisa-branca.webp" 
             alt="Débora Bolangno - Mentora de Carreira" 
             className="w-full h-full object-cover object-top"
+            referrerPolicy="no-referrer"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
         </div>
@@ -578,7 +582,7 @@ const About = () => {
             </p>
           </div>
           <div className="mt-12 flex items-center gap-4 border-t border-ink/10 pt-8">
-            <img src="/assets/debora/00_identidade/logo-db-simbolo.png" alt="" className="w-12 h-12 object-contain" />
+            <img src="/assets/debora/00_identidade/logo-db-simbolo.png" alt="" className="w-12 h-12 object-contain" referrerPolicy="no-referrer" />
             <div>
               <p className="text-[9px] font-mono uppercase tracking-[0.4em] text-ink/20 mb-1">Formação & Expertise</p>
               <p className="text-sm text-ink/70 font-medium italic">Especialista em Desenvolvimento Humano e Estratégia de Carreira</p>
@@ -881,7 +885,7 @@ const Qualification = () => {
           Mentoria focada em posições de liderança, gestão e transições estratégicas.
         </p>
       </div>
-      <img src="/assets/debora/00_identidade/logo-db-simbolo.png" alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] md:w-[40%] opacity-[0.03] pointer-events-none" />
+      <img src="/assets/debora/00_identidade/logo-db-simbolo.png" alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] md:w-[40%] opacity-[0.03] pointer-events-none" referrerPolicy="no-referrer" />
     </section>
   );
 };
@@ -920,7 +924,7 @@ const PresenceGallery = () => {
             {
               src: "/assets/debora/01_home/galeria/debora-galeria-04-pose-cadeira.webp",
               label: "Mentoria & Conexão",
-              alt: "Débora Bolangno sorridente em pose de retrato próximo",
+              alt: "Débora Bolangno sorridente in pose de retrato próximo",
               delay: 0.4
             },
             {
@@ -942,6 +946,7 @@ const PresenceGallery = () => {
                 src={item.src} 
                 alt={item.alt} 
                 className="w-full h-full object-cover object-[50%_20%] brightness-[1.08] contrast-[1.02] transition-transform duration-[2.5s] group-hover:scale-110"
+                referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60"></div>
               <div className="absolute bottom-10 left-10 text-white translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
@@ -1675,6 +1680,7 @@ const Repertoire = () => {
             src="/assets/debora/02_programas/lideranca-atualizada/debora-lideranca-livros.webp" 
             alt="Repertório Débora Bolangno - Livros de liderança e gestão" 
             className="relative rounded-[24px] md:rounded-[40px] shadow-2xl brightness-95 group-hover:brightness-100 transition-all duration-700 w-full" 
+            referrerPolicy="no-referrer"
           />
         </div>
       </div>
@@ -1871,6 +1877,7 @@ const CTA = () => {
               src="/assets/debora/01_home/sobre/debora-sobre-camisa-branca.webp" 
               alt="Débora Bolangno - Posicionamento e Estratégia de Carreira" 
               className="w-full h-full object-cover object-[center_15%] transition-transform duration-[3s] hover:scale-105"
+              referrerPolicy="no-referrer"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
           </div>
@@ -1912,7 +1919,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-10 pb-8 border-b border-white/10">
           <div className="flex flex-col items-center md:items-start gap-4">
             <div className="flex items-center gap-4">
-              <img src="/assets/debora/00_identidade/logo-db-simbolo.png" alt="Logo Débora Bolangno" className="w-10 h-10 object-contain brightness-0 invert" />
+              <img src="/assets/debora/00_identidade/logo-db-simbolo.png" alt="Logo Débora Bolangno" className="w-10 h-10 object-contain brightness-0 invert" referrerPolicy="no-referrer" />
               <div className="flex flex-col">
                 <span className="font-serif text-xl font-bold leading-none mb-1">Débora Bolangno</span>
                 <span className="text-[9px] uppercase tracking-widest text-creme/40">Estratégia de Carreira & Liderança</span>
