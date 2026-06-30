@@ -32,6 +32,8 @@ import {
 import { useState, useEffect } from "react";
 import * as React from "react";
 
+const BASE_IMAGE_URL = "https://raw.githubusercontent.com/brunocorreagomes-ops/debora-bolangno/main/public/";
+
 const Navbar = ({ isMobileMenuOpen, setIsMobileMenuOpen }: { isMobileMenuOpen: boolean; setIsMobileMenuOpen: (open: boolean) => void }) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -109,7 +111,7 @@ const Navbar = ({ isMobileMenuOpen, setIsMobileMenuOpen }: { isMobileMenuOpen: b
             className="flex items-center gap-3 group" 
           >
             <img 
-              src="assets/debora/00_identidade/logo-db-simbolo.png" 
+              src={`${BASE_IMAGE_URL}assets/debora/00_identidade/logo-db-simbolo.png`} 
               alt="Logo Débora Bolangno" 
               className="w-11 h-11 object-contain group-hover:scale-110 transition-transform"
               referrerPolicy="no-referrer"
@@ -189,7 +191,7 @@ const Navbar = ({ isMobileMenuOpen, setIsMobileMenuOpen }: { isMobileMenuOpen: b
               <div className="flex justify-between items-center mb-12">
                 <div className="flex items-center gap-3">
                   <img 
-                    src="assets/debora/00_identidade/logo-db-simbolo.png" 
+                    src={`${BASE_IMAGE_URL}assets/debora/00_identidade/logo-db-simbolo.png`} 
                     alt="Logo" 
                     className="w-10 h-10 object-contain"
                     referrerPolicy="no-referrer"
@@ -404,7 +406,7 @@ const Hero = ({ onOpenEnrollModal }: { onOpenEnrollModal: (title: string, subtit
             className="order-6 relative rounded-[32px] overflow-hidden aspect-[4/5] bg-verde shadow-xl border border-ink/5 w-full max-w-[420px] mx-auto my-6 block md:hidden"
           >
             <img 
-              src="https://i.ibb.co/mVqGg1yW/debora-hero-nova.webp" 
+              src={`${BASE_IMAGE_URL}assets/debora/01_home/hero-atual-manter/debora-hero-nova.webp`} 
               alt="Débora Bolangno" 
               className="absolute w-full h-[110%] -top-[5%] object-cover object-[center_20%]"
               referrerPolicy="no-referrer"
@@ -423,7 +425,7 @@ const Hero = ({ onOpenEnrollModal }: { onOpenEnrollModal: (title: string, subtit
           className="relative rounded-[40px] md:rounded-[64px] overflow-hidden aspect-[4/5] bg-verde shadow-2xl border border-ink/5 hidden md:block w-full max-w-[380px] lg:max-w-[410px] mx-auto md:max-w-none md:self-start md:mt-2"
         >
           <img 
-            src="https://i.ibb.co/mVqGg1yW/debora-hero-nova.webp" 
+            src={`${BASE_IMAGE_URL}assets/debora/01_home/hero-atual-manter/debora-hero-nova.webp`} 
             alt="Débora Bolangno" 
             className="absolute w-full h-[110%] -top-[5%] object-cover object-[center_20%] transition-transform duration-[3s] hover:scale-105"
             referrerPolicy="no-referrer"
@@ -435,7 +437,7 @@ const Hero = ({ onOpenEnrollModal }: { onOpenEnrollModal: (title: string, subtit
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 0.08, x: 0 }}
             transition={{ delay: 1.5, duration: 1 }}
-            src="assets/debora/00_identidade/logo-db-simbolo.png" 
+            src={`${BASE_IMAGE_URL}assets/debora/00_identidade/logo-db-simbolo.png`} 
             alt="" 
             className="absolute top-10 right-10 w-24 md:w-32 pointer-events-none brightness-0 invert" 
             referrerPolicy="no-referrer"
@@ -575,7 +577,7 @@ const About = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 min-[900px]:grid-cols-2 gap-12 md:gap-20 items-center">
         <div className="relative rounded-[24px] md:rounded-[32px] overflow-hidden shadow-2xl aspect-square md:aspect-auto min-[900px]:h-[680px]">
           <img 
-            src="assets/debora/01_home/sobre/debora-sobre-camisa-branca.webp" 
+            src={`${BASE_IMAGE_URL}assets/debora/01_home/sobre/debora-sobre-camisa-branca.webp`} 
             alt="Débora Bolangno - Mentora de Carreira" 
             className="w-full h-full object-cover object-top"
             referrerPolicy="no-referrer"
@@ -596,7 +598,7 @@ const About = () => {
             </p>
           </div>
           <div className="mt-12 flex items-center gap-4 border-t border-ink/10 pt-8">
-            <img src="assets/debora/00_identidade/logo-db-simbolo.png" alt="" className="w-12 h-12 object-contain" referrerPolicy="no-referrer" />
+            <img src={`${BASE_IMAGE_URL}assets/debora/00_identidade/logo-db-simbolo.png`} alt="" className="w-12 h-12 object-contain" referrerPolicy="no-referrer" />
             <div>
               <p className="text-[9px] font-mono uppercase tracking-[0.4em] text-ink/20 mb-1">Formação & Expertise</p>
               <p className="text-sm text-ink/70 font-medium italic">Especialista em Desenvolvimento Humano e Estratégia de Carreira</p>
@@ -899,7 +901,7 @@ const Qualification = () => {
           Mentoria focada em posições de liderança, gestão e transições estratégicas.
         </p>
       </div>
-      <img src="assets/debora/00_identidade/logo-db-simbolo.png" alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] md:w-[40%] opacity-[0.03] pointer-events-none" referrerPolicy="no-referrer" />
+      <img src={`${BASE_IMAGE_URL}assets/debora/00_identidade/logo-db-simbolo.png`} alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] md:w-[40%] opacity-[0.03] pointer-events-none" referrerPolicy="no-referrer" />
     </section>
   );
 };
@@ -924,25 +926,25 @@ const PresenceGallery = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {[
             {
-              src: "assets/debora/01_home/galeria/debora-galeria-03-sentada-color.webp",
+              src: `${BASE_IMAGE_URL}assets/debora/01_home/galeria/debora-galeria-03-sentada-color.webp`,
               label: "Atuação & Liderança",
               alt: "Débora Bolangno sentada em contexto profissional de liderança",
               delay: 0
             },
             {
-              src: "assets/debora/01_home/galeria/debora-galeria-01-presenca-espelho.webp",
+              src: `${BASE_IMAGE_URL}assets/debora/01_home/galeria/debora-galeria-01-presenca-espelho.webp`,
               label: "Branding & Posicionamento",
               alt: "Débora Bolangno refletida no espelho com posture profissional", // Note: fixing "postura" typo in translation as well if needed, but we keep text as is. Wait, in original it was "posture professional"? No, "postura profissional". Let's use exactly what was in the file!
               delay: 0.2
             },
             {
-              src: "assets/debora/01_home/galeria/debora-galeria-04-pose-cadeira.webp",
+              src: `${BASE_IMAGE_URL}assets/debora/01_home/galeria/debora-galeria-04-pose-cadeira.webp`,
               label: "Mentoria & Conexão",
               alt: "Débora Bolangno sorridente in pose de retrato próximo",
               delay: 0.4
             },
             {
-              src: "assets/debora/01_home/galeria/debora-galeria-02-sentada-pb.webp",
+              src: `${BASE_IMAGE_URL}assets/debora/01_home/galeria/debora-galeria-02-sentada-pb.webp`,
               label: "Presença Executiva",
               alt: "Débora Bolangno em retrato editorial preto e branco expressando autoridade",
               delay: 0.6
@@ -1691,7 +1693,7 @@ const Repertoire = () => {
         <div className="order-1 md:order-2 relative group">
           <div className="absolute -inset-2 md:-inset-4 bg-verde/5 rounded-[24px] md:rounded-[48px] scale-105 group-hover:scale-110 transition-transform duration-700"></div>
           <img 
-            src="assets/debora/02_programas/lideranca-atualizada/debora-lideranca-livros.webp" 
+            src={`${BASE_IMAGE_URL}assets/debora/02_programas/lideranca-atualizada/debora-lideranca-livros.webp`} 
             alt="Repertório Débora Bolangno - Livros de liderança e gestão" 
             className="relative rounded-[24px] md:rounded-[40px] shadow-2xl brightness-95 group-hover:brightness-100 transition-all duration-700 w-full" 
             referrerPolicy="no-referrer"
@@ -1775,7 +1777,7 @@ const Differentials = () => {
             className="relative rounded-[40px] md:rounded-[64px] overflow-hidden aspect-[4/5] shadow-2xl group"
           >
             <img 
-              src="https://i.ibb.co/mVqGg1yW/debora-hero-nova.webp" 
+              src={`${BASE_IMAGE_URL}assets/debora/01_home/hero-atual-manter/debora-hero-nova.webp`} 
               alt="Débora Bolangno Diferenciais" 
               className="w-full h-full object-cover object-[center_20%] transition-transform duration-[3s] group-hover:scale-105"
               referrerPolicy="no-referrer"
@@ -1888,7 +1890,7 @@ const CTA = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div className="relative rounded-[32px] md:rounded-[48px] overflow-hidden aspect-square md:aspect-[4/5] max-w-md mx-auto w-full shadow-xl order-last md:order-first">
             <img 
-              src="assets/debora/01_home/sobre/debora-sobre-camisa-branca.webp" 
+              src={`${BASE_IMAGE_URL}assets/debora/01_home/sobre/debora-sobre-camisa-branca.webp`} 
               alt="Débora Bolangno - Posicionamento e Estratégia de Carreira" 
               className="w-full h-full object-cover object-[center_15%] transition-transform duration-[3s] hover:scale-105"
               referrerPolicy="no-referrer"
@@ -1933,7 +1935,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-10 pb-8 border-b border-white/10">
           <div className="flex flex-col items-center md:items-start gap-4">
             <div className="flex items-center gap-4">
-              <img src="assets/debora/00_identidade/logo-db-simbolo.png" alt="Logo Débora Bolangno" className="w-10 h-10 object-contain brightness-0 invert" referrerPolicy="no-referrer" />
+              <img src={`${BASE_IMAGE_URL}assets/debora/00_identidade/logo-db-simbolo.png`} alt="Logo Débora Bolangno" className="w-10 h-10 object-contain brightness-0 invert" referrerPolicy="no-referrer" />
               <div className="flex flex-col">
                 <span className="font-serif text-xl font-bold leading-none mb-1">Débora Bolangno</span>
                 <span className="text-[9px] uppercase tracking-widest text-creme/40">Estratégia de Carreira & Liderança</span>
@@ -2036,49 +2038,59 @@ const IframeModal = ({
             onClick={onClose}
             className="fixed inset-0 bg-verde/60 backdrop-blur-md z-[60]"
           />
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95, y: 15 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.95, y: 15 }}
-            className="fixed inset-x-4 inset-y-4 md:inset-x-12 md:inset-y-12 lg:inset-x-24 lg:inset-y-16 m-auto max-w-4xl bg-creme rounded-[2rem] z-[70] overflow-hidden shadow-2xl flex flex-col"
-          >
-            {/* Header */}
-            <div className="p-5 md:p-6 border-b border-ink/5 flex justify-between items-center bg-white">
-              <div className="pr-8">
-                <h3 className="font-serif text-lg md:text-2xl font-bold text-ink leading-tight">{title}</h3>
-                <p className="text-ink/60 text-xs md:text-sm mt-0.5">{subtitle}</p>
+          <div className="fixed inset-0 z-[70] overflow-y-auto flex justify-center items-start md:items-center p-4 md:p-12 lg:p-16">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95, y: 15 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 15 }}
+              className="relative w-full max-w-4xl bg-creme rounded-[2rem] shadow-2xl flex flex-col overflow-hidden my-auto max-h-[calc(100dvh-32px)] md:max-h-[calc(100vh-96px)]"
+            >
+              {/* Header (Sticky) */}
+              <div className="sticky top-0 z-20 p-5 md:p-6 border-b border-ink/5 flex justify-between items-center bg-white shrink-0">
+                <div className="pr-8">
+                  <h3 className="font-serif text-lg md:text-2xl font-bold text-ink leading-tight">{title}</h3>
+                  <p className="text-ink/60 text-xs md:text-sm mt-0.5">{subtitle}</p>
+                </div>
+                <button 
+                  onClick={onClose}
+                  className="w-11 h-11 hover:bg-ink/5 rounded-full transition-colors flex items-center justify-center text-ink/70 hover:text-ink shrink-0"
+                  aria-label="Fechar"
+                >
+                  <X size={24} />
+                </button>
               </div>
-              <button 
-                onClick={onClose}
-                className="p-2 hover:bg-ink/5 rounded-full transition-colors flex items-center justify-center text-ink/70 hover:text-ink shrink-0"
-              >
-                <X size={20} />
-              </button>
-            </div>
 
-            {/* Iframe content */}
-            <div className="flex-1 bg-white relative overflow-hidden flex flex-col">
-              <iframe
-                src={iframeUrl}
-                title={title}
-                className="w-full h-full border-0 flex-1"
-                allow="autoplay"
-              />
-            </div>
+              {/* Iframe content */}
+              <div className="flex-1 bg-white relative overflow-hidden flex flex-col min-h-[300px]">
+                <iframe
+                  src={iframeUrl}
+                  title={title}
+                  className="w-full h-[65dvh] md:h-[650px] border-0 flex-1 min-h-[300px]"
+                  allow="autoplay"
+                />
+              </div>
 
-            {/* Footer / Fallback */}
-            <div className="p-4 md:p-5 border-t border-ink/5 bg-creme text-center flex flex-col items-center justify-center gap-1">
-              <a 
-                href={fallbackUrl} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-[11px] md:text-xs text-verde-med hover:text-verde font-bold underline transition-colors flex items-center gap-1 inline-flex"
-              >
-                <span>Se o formulário não carregar, abrir em nova aba</span>
-                <ExternalLink size={12} />
-              </a>
-            </div>
-          </motion.div>
+              {/* Footer / Fallback & New Close Button */}
+              <div className="p-4 md:p-5 border-t border-ink/5 bg-creme text-center flex flex-col items-center justify-center gap-3 shrink-0">
+                <button
+                  onClick={onClose}
+                  className="px-6 py-3 border border-ink/15 text-ink/80 hover:bg-ink hover:text-creme rounded-full text-xs font-bold tracking-widest uppercase transition-all duration-300 w-full sm:w-auto min-h-[44px] flex items-center justify-center"
+                >
+                  Fechar formulário
+                </button>
+                
+                <a 
+                  href={fallbackUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-[11px] md:text-xs text-verde-med hover:text-verde font-bold underline transition-colors flex items-center gap-1 inline-flex mt-1"
+                >
+                  <span>Se o formulário não carregar, abrir em nova aba</span>
+                  <ExternalLink size={12} />
+                </a>
+              </div>
+            </motion.div>
+          </div>
         </>
       )}
     </AnimatePresence>
