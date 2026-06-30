@@ -32,7 +32,7 @@ import {
 import { useState, useEffect } from "react";
 import * as React from "react";
 
-const BASE_IMAGE_URL = "https://raw.githubusercontent.com/brunocorreagomes-ops/debora-bolangno/main/public/";
+const BASE_IMAGE_URL = "/";
 
 const Navbar = ({ isMobileMenuOpen, setIsMobileMenuOpen }: { isMobileMenuOpen: boolean; setIsMobileMenuOpen: (open: boolean) => void }) => {
   const [isScrolled, setIsScrolled] = useState(false);
