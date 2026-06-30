@@ -406,7 +406,7 @@ const Hero = ({ onOpenEnrollModal }: { onOpenEnrollModal: (title: string, subtit
             className="order-6 relative rounded-[32px] overflow-hidden aspect-[4/5] bg-verde shadow-xl border border-ink/5 w-full max-w-[420px] mx-auto my-6 block md:hidden"
           >
             <img 
-              src={`${BASE_IMAGE_URL}assets/debora/01_home/hero-atual-manter/debora-hero-nova.webp`} 
+              src={`${BASE_IMAGE_URL}assets/debora/01_home/debora-hero-nova.webp`} 
               alt="Débora Bolangno" 
               className="absolute w-full h-[110%] -top-[5%] object-cover object-[center_20%]"
               referrerPolicy="no-referrer"
@@ -425,7 +425,7 @@ const Hero = ({ onOpenEnrollModal }: { onOpenEnrollModal: (title: string, subtit
           className="relative rounded-[40px] md:rounded-[64px] overflow-hidden aspect-[4/5] bg-verde shadow-2xl border border-ink/5 hidden md:block w-full max-w-[380px] lg:max-w-[410px] mx-auto md:max-w-none md:self-start md:mt-2"
         >
           <img 
-            src={`${BASE_IMAGE_URL}assets/debora/01_home/hero-atual-manter/debora-hero-nova.webp`} 
+            src={`${BASE_IMAGE_URL}assets/debora/01_home/debora-hero-nova.webp`} 
             alt="Débora Bolangno" 
             className="absolute w-full h-[110%] -top-[5%] object-cover object-[center_20%] transition-transform duration-[3s] hover:scale-105"
             referrerPolicy="no-referrer"
@@ -1424,8 +1424,8 @@ const ProgramsGrid = () => {
     {
       title: "Liderança Atualizada",
       subtitle: "MENTORIA EM GRUPO",
-      desc: "Programa estratégico em grupo para líderes seniores e gestores que buscam transição de carreira, delegação segura, cultura de confiança e segurança psicológica em suas equipes.",
-      features: ["Líderes, Coordenadores e Gerentes", "Transição do Operacional para o Estratégico", "Próxima turma em agosto"],
+      desc: "Programa estratégico em grupo para líderes, coordenadores e gerentes que querem fortalecer sua comunicação, tomar decisões com mais clareza, desenvolver autonomia no time e engajar pessoas para resultados extraordinários.",
+      features: ["Líderes, Coordenadores e Gerentes", "Transição do Operacional para o Estratégico", "Edição de agosto"],
       icon: <Users size={24} />,
       link: "lideranca-atualizada.html",
       whatsapp: "Olá, Débora! Tenho interesse em garantir minha vaga na turma de agosto do programa Liderança Atualizada.",
@@ -1777,7 +1777,7 @@ const Differentials = () => {
             className="relative rounded-[40px] md:rounded-[64px] overflow-hidden aspect-[4/5] shadow-2xl group"
           >
             <img 
-              src={`${BASE_IMAGE_URL}assets/debora/01_home/hero-atual-manter/debora-hero-nova.webp`} 
+              src={`${BASE_IMAGE_URL}assets/debora/01_home/debora-hero-nova.webp`} 
               alt="Débora Bolangno Diferenciais" 
               className="w-full h-full object-cover object-[center_20%] transition-transform duration-[3s] group-hover:scale-105"
               referrerPolicy="no-referrer"
