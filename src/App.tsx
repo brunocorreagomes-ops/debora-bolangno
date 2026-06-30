@@ -32,9 +32,7 @@ import {
 import { useState, useEffect } from "react";
 import * as React from "react";
 
-const BASE_IMAGE_URL = typeof window !== "undefined" && window.location.pathname.includes("/debora-bolangno")
-  ? "/debora-bolangno/"
-  : "/";
+const BASE_IMAGE_URL = "/";
 
 const Navbar = ({ isMobileMenuOpen, setIsMobileMenuOpen }: { isMobileMenuOpen: boolean; setIsMobileMenuOpen: (open: boolean) => void }) => {
   const [isScrolled, setIsScrolled] = useState(false);
