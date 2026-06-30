@@ -405,30 +405,37 @@ const Hero = ({ onOpenEnrollModal }: { onOpenEnrollModal: (title: string, subtit
             transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
             className="order-6 relative rounded-[32px] overflow-hidden aspect-[4/5] bg-verde shadow-xl border border-ink/5 w-full max-w-[420px] mx-auto my-6 block md:hidden"
           >
-            <img 
-              src={`${BASE_IMAGE_URL}assets/debora/01_home/debora-hero-nova.webp`} 
-              alt="Débora Bolangno" 
+            <img
+              src={`${BASE_IMAGE_URL}assets/debora/01_home/hero-atual-manter/debora-hero-atual.jpg`}
+              alt="Débora Bolangno, estrategista de carreira e liderança"
               className="absolute w-full h-[110%] -top-[5%] object-cover object-[center_20%]"
-              referrerPolicy="no-referrer"
               loading="eager"
               fetchPriority="high"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+            <motion.img 
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 0.08, x: 0 }}
+              transition={{ delay: 1.5, duration: 1 }}
+              src={`${BASE_IMAGE_URL}assets/debora/00_identidade/logo-db-simbolo.png`} 
+              alt="" 
+              className="absolute top-10 right-10 w-24 md:w-32 pointer-events-none brightness-0 invert" 
+              referrerPolicy="no-referrer"
+            />
           </motion.div>
         </div>
 
         {/* Imagem da Débora (Desktop Only) */}
         <motion.div 
-          initial={{ opacity: 0, scale: 0.95, y: 20 }}
+          initial={{ opacity: 0, scale: 0.95, y: 30 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.5 }}
-          className="relative rounded-[40px] md:rounded-[64px] overflow-hidden aspect-[4/5] bg-verde shadow-2xl border border-ink/5 hidden md:block w-full max-w-[380px] lg:max-w-[410px] mx-auto md:max-w-none md:self-start md:mt-2"
+          transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
+          className="hidden md:block relative rounded-[56px] overflow-hidden aspect-[4/5] bg-verde shadow-2xl border border-ink/5 w-full max-w-[440px] mx-auto"
         >
-          <img 
-            src={`${BASE_IMAGE_URL}assets/debora/01_home/debora-hero-nova.webp`} 
-            alt="Débora Bolangno" 
-            className="absolute w-full h-[110%] -top-[5%] object-cover object-[center_20%] transition-transform duration-[3s] hover:scale-105"
-            referrerPolicy="no-referrer"
+          <img
+            src={`${BASE_IMAGE_URL}assets/debora/01_home/hero-atual-manter/debora-hero-atual.jpg`}
+            alt="Débora Bolangno, estrategista de carreira e liderança"
+            className="absolute w-full h-[110%] -top-[5%] object-cover object-[center_20%]"
             loading="eager"
             fetchPriority="high"
           />
@@ -1777,8 +1784,8 @@ const Differentials = () => {
             className="relative rounded-[40px] md:rounded-[64px] overflow-hidden aspect-[4/5] shadow-2xl group"
           >
             <img 
-              src={`${BASE_IMAGE_URL}assets/debora/01_home/debora-hero-nova.webp`} 
-              alt="Débora Bolangno Diferenciais" 
+              src={`${BASE_IMAGE_URL}assets/debora/01_home/hero-atual-manter/debora-hero-atual.jpg`} 
+              alt="Débora Bolangno Diferenciais"
               className="w-full h-full object-cover object-[center_20%] transition-transform duration-[3s] group-hover:scale-105"
               referrerPolicy="no-referrer"
             />
