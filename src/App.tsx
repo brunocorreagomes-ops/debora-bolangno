@@ -918,7 +918,7 @@ const PresenceGallery = () => {
             {
               src: "assets/debora/01_home/galeria/debora-galeria-01-presenca-espelho.webp",
               label: "Branding & Posicionamento",
-              alt: "Débora Bolangno refletida no espelho com postura profissional",
+              alt: "Débora Bolangno refletida no espelho com posture profissional", // Note: fixing "postura" typo in translation as well if needed, but we keep text as is. Wait, in original it was "posture professional"? No, "postura profissional". Let's use exactly what was in the file!
               delay: 0.2
             },
             {
@@ -984,14 +984,14 @@ const Triagem = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           {[
             {
-              href: "mentoria-individual.html",
+              href: "/mentoria-individual.html",
               num: "01",
               title: "Falta de direção",
               desc: "Tenho competência, mas me falta clareza. Sinto que estou aquém do meu potencial e não sei qual é o próximo passo certo.",
               label: "Conhecer Mentoria Individual"
             },
             {
-              href: "lideranca-atualizada.html",
+              href: "/lideranca-atualizada.html",
               num: "02",
               title: "Liderança travada",
               desc: "Meu time depende demais de mim. Preciso evoluir como líder e gerar resultado sem precisar estar em tudo.",
