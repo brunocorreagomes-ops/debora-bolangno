@@ -321,9 +321,9 @@ const Hero = () => {
  
                 <div className="flex flex-col gap-1.5 mt-2.5 pt-2.5 border-t border-verde/5">
                   <a 
-                    href="https://wa.me/5511940803333?text=Ol%C3%A1%2C%20gostaria%20de%20garantir%20minha%20vaga%20na%20turma%20de%20agosto%20da%20mentoria%20Lideran%C3%A7a%20Atualizada."
+                    href="https://forms.gle/23pexoe6Hmi5M1R58"
                     target="_blank"
-                    rel="noopener"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center justify-center bg-verde text-creme hover:bg-[#112e28] hover:text-white text-[10px] font-black uppercase tracking-wider py-2.5 px-4 rounded-full shadow-md hover:shadow-lg transition-all duration-200 text-center"
                   >
                     GARANTIR MINHA VAGA
@@ -362,9 +362,9 @@ const Hero = () => {
  
                 <div className="flex flex-col gap-1.5 mt-2.5 pt-2.5 border-t border-verde/5">
                   <a 
-                    href="https://wa.me/5511940803333?text=Ol%C3%A1%2C%20D%C3%A9bora!%20Tenho%20interesse%20em%20garantir%20minha%20vaga%20na%20turma%20de%20Marca%20Intencional."
+                    href="https://forms.gle/Wb76A1iKAMqjZxcn8"
                     target="_blank"
-                    rel="noopener"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center justify-center bg-verde text-creme hover:bg-[#112e28] hover:text-white text-[10px] font-black uppercase tracking-wider py-2.5 px-4 rounded-full shadow-md hover:shadow-lg transition-all duration-200 text-center"
                   >
                     GARANTIR MINHA VAGA
