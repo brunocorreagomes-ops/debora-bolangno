@@ -240,7 +240,7 @@ const Navbar = ({ isMobileMenuOpen, setIsMobileMenuOpen }: { isMobileMenuOpen: b
   );
 };
 
-const Hero = () => {
+const Hero = ({ onOpenEnrollModal }: { onOpenEnrollModal: (title: string, subtitle: string, iframeUrl: string, fallbackUrl: string) => void }) => {
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -321,10 +321,17 @@ const Hero = () => {
  
                 <div className="flex flex-col gap-1.5 mt-2.5 pt-2.5 border-t border-verde/5">
                   <a 
-                    href="https://forms.gle/23pexoe6Hmi5M1R58"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center bg-verde text-creme hover:bg-[#112e28] hover:text-white text-[10px] font-black uppercase tracking-wider py-2.5 px-4 rounded-full shadow-md hover:shadow-lg transition-all duration-200 text-center"
+                    href="#"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      onOpenEnrollModal(
+                        "Inscrição — Liderança Atualizada",
+                        "Preencha o formulário para registrar seu interesse no programa.",
+                        "https://forms.gle/23pexoe6Hmi5M1R58",
+                        "https://forms.gle/23pexoe6Hmi5M1R58"
+                      );
+                    }}
+                    className="inline-flex items-center justify-center bg-verde text-creme hover:bg-[#112e28] hover:text-white text-[10px] font-black uppercase tracking-wider py-2.5 px-4 rounded-full shadow-md hover:shadow-lg transition-all duration-200 text-center cursor-pointer"
                   >
                     GARANTIR MINHA VAGA
                   </a>
@@ -362,10 +369,17 @@ const Hero = () => {
  
                 <div className="flex flex-col gap-1.5 mt-2.5 pt-2.5 border-t border-verde/5">
                   <a 
-                    href="https://forms.gle/Wb76A1iKAMqjZxcn8"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center bg-verde text-creme hover:bg-[#112e28] hover:text-white text-[10px] font-black uppercase tracking-wider py-2.5 px-4 rounded-full shadow-md hover:shadow-lg transition-all duration-200 text-center"
+                    href="#"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      onOpenEnrollModal(
+                        "Inscrição — Marca Intencional",
+                        "Preencha o formulário para registrar seu interesse no programa.",
+                        "https://docs.google.com/forms/d/e/1FAIpQLSc9jF0b6faDEQJK07noy3xmcaNkyfRR5hfH3-ycp9LQu1Hc0g/viewform?embedded=true",
+                        "https://forms.gle/Wb76A1iKAMqjZxcn8"
+                      );
+                    }}
+                    className="inline-flex items-center justify-center bg-verde text-creme hover:bg-[#112e28] hover:text-white text-[10px] font-black uppercase tracking-wider py-2.5 px-4 rounded-full shadow-md hover:shadow-lg transition-all duration-200 text-center cursor-pointer"
                   >
                     GARANTIR MINHA VAGA
                   </a>
@@ -1980,12 +1994,110 @@ const SectionReveal = ({ children }: { children: React.ReactNode }) => (
   </motion.div>
 );
 
+const IframeModal = ({ 
+  isOpen, 
+  onClose, 
+  title, 
+  subtitle, 
+  iframeUrl, 
+  fallbackUrl 
+}: { 
+  isOpen: boolean; 
+  onClose: () => void; 
+  title: string; 
+  subtitle: string; 
+  iframeUrl: string; 
+  fallbackUrl: string; 
+}) => {
+  useEffect(() => {
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", handleEsc);
+    return () => window.removeEventListener("keydown", handleEsc);
+  }, [onClose]);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [isOpen]);
+
+  return (
+    <AnimatePresence>
+      {isOpen && (
+        <>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={onClose}
+            className="fixed inset-0 bg-verde/60 backdrop-blur-md z-[60]"
+          />
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95, y: 15 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.95, y: 15 }}
+            className="fixed inset-x-4 inset-y-4 md:inset-x-12 md:inset-y-12 lg:inset-x-24 lg:inset-y-16 m-auto max-w-4xl bg-creme rounded-[2rem] z-[70] overflow-hidden shadow-2xl flex flex-col"
+          >
+            {/* Header */}
+            <div className="p-5 md:p-6 border-b border-ink/5 flex justify-between items-center bg-white">
+              <div className="pr-8">
+                <h3 className="font-serif text-lg md:text-2xl font-bold text-ink leading-tight">{title}</h3>
+                <p className="text-ink/60 text-xs md:text-sm mt-0.5">{subtitle}</p>
+              </div>
+              <button 
+                onClick={onClose}
+                className="p-2 hover:bg-ink/5 rounded-full transition-colors flex items-center justify-center text-ink/70 hover:text-ink shrink-0"
+              >
+                <X size={20} />
+              </button>
+            </div>
+
+            {/* Iframe content */}
+            <div className="flex-1 bg-white relative overflow-hidden flex flex-col">
+              <iframe
+                src={iframeUrl}
+                title={title}
+                className="w-full h-full border-0 flex-1"
+                allow="autoplay"
+              />
+            </div>
+
+            {/* Footer / Fallback */}
+            <div className="p-4 md:p-5 border-t border-ink/5 bg-creme text-center flex flex-col items-center justify-center gap-1">
+              <a 
+                href={fallbackUrl} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-[11px] md:text-xs text-verde-med hover:text-verde font-bold underline transition-colors flex items-center gap-1 inline-flex"
+              >
+                <span>Se o formulário não carregar, abrir em nova aba</span>
+                <ExternalLink size={12} />
+              </a>
+            </div>
+          </motion.div>
+        </>
+      )}
+    </AnimatePresence>
+  );
+};
+
 export default function App() {
   const [showBackToTop, setShowBackToTop] = useState(false);
   const [showWhatsApp, setShowWhatsApp] = useState(false);
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isFooterVisible, setIsFooterVisible] = useState(false);
+  const [enrollModal, setEnrollModal] = useState<{
+    isOpen: boolean;
+    title: string;
+    subtitle: string;
+    iframeUrl: string;
+    fallbackUrl: string;
+  } | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -2048,7 +2160,7 @@ export default function App() {
     <div className="selection:bg-verde selection:text-white relative">
       <Navbar isMobileMenuOpen={isMobileMenuOpen} setIsMobileMenuOpen={setIsMobileMenuOpen} />
       <main>
-        <Hero />
+        <Hero onOpenEnrollModal={(title, subtitle, iframeUrl, fallbackUrl) => setEnrollModal({ isOpen: true, title, subtitle, iframeUrl, fallbackUrl })} />
         <Marquee />
         <PresenceGallery />
         <SectionReveal><Triagem /></SectionReveal>
@@ -2078,6 +2190,15 @@ export default function App() {
       <ContactModal 
         isOpen={isContactModalOpen} 
         onClose={() => setIsContactModalOpen(false)} 
+      />
+
+      <IframeModal 
+        isOpen={enrollModal?.isOpen || false} 
+        onClose={() => setEnrollModal(null)} 
+        title={enrollModal?.title || ""} 
+        subtitle={enrollModal?.subtitle || ""} 
+        iframeUrl={enrollModal?.iframeUrl || ""} 
+        fallbackUrl={enrollModal?.fallbackUrl || ""} 
       />
 
       {/* Floating Actions */}
